@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>tools - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html" class="active"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: python 一些工具
+date: 2015-11-24
+category: python</h2>
+<p><strong>摘要:</strong>
+Python中有很多的包可以使用,防止造轮子提高开发效率,降低bug数量.这里贴
+一些链接和一些使用简介内容.</p>
+<h4><a class="header" href="#gevent" id="gevent">Gevent</a></h4>
+<ul>
+<li>协程不是进程或线程，其执行过程更类似于子例程，或者说不带返回值的函数调用</li>
+<li>多个线程相对独立，有自己的上下文，切换受系统控制</li>
+<li>协程相对独立，有自己的上下文，其切换由自己控制，由当前协程切换到其他协程由当前协程来控制。没有了线程所谓的安全问题</li>
+<li>一个程序可以包含多个协程，可以对比与一个进程包含多个线程，因而下面我们来比较协程和线程</li>
+<li>gevent是第三方库，通过greenlet实现协程
+<ul>
+<li>greenlet 包是 Stackless 的副产品，其将微线程称为 “tasklet” </li>
+<li>tasklet运行在伪并发中，使用channel进行同步数据交换。一个”greenlet”，是一个更加原始的微线程的概念，但是没有调度，或者叫做协程。这在你需要控制你的代码时很有用。你可以自己构造微线程的 调度器；也可以使用”greenlet”实现高级的控制流。例如可以重新创建构造器；不同于Python的构造器，我们的构造器可以嵌套的调用函数，而被 嵌套的函数也可以 yield 一个值。Greenlet是作为一个C扩展模块给未修改的解释器的</li>
+<li>每个greenlet都只是heap(堆内存)中的一个python object(PyGreenlet).所以对于一个进程你创建百万甚至千万个greenlet都没有问题.</li>
+<li>每一个greenlet其实就是一个函数,以及保存这个函数执行时的上下文.对于函数来说上下文也就是其stack(栈).同一个进程的所有的greenlets共用一个共同的操作系统分配的用户栈.所以同一时刻只能有栈数据不冲突的greenlet使用这个全局的栈.</li>
+<li>Simple case of greenlet</li>
+<li>
+<pre><code></code></pre>
+</li>
+</ul>
+from greenlet import greenlet
+def test1():
+print 12
+gr2.switch()
+print 34
+def test2():
+print 56
+gr1.switch()
+print 78
+gr1 = greenlet(test1)
+gr2 = greenlet(test2)
+gr1.switch()
+<pre><code>
+</code></pre>
+</li>
+<li>gevent 使用</li>
+</ul>
+<ol>
+<li>说明：
+<ul>
+<li>使用gevent，可以获得极高的并发性能</li>
+<li>gevent只能在Unix/Linux下运行</li>
+<li>在Windows下不保证正常安装和运行</li>
+<li>由于gevent是基于IO切换的协程，所以最神奇的是，我们编写的Web App代码，不需要引入gevent的包，也不需要改任何代码，仅仅在部署的时候，用一个支持gevent的WSGI服务器，立刻就获得了数倍的性能提升。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>总结一下：</li>
+</ul>
+<ol>
+<li>多进程能够利用多核优势，但是进程间通信比较麻烦，另外，进程数目的增加会使性能下降，进程切换的成本较高。程序流程复杂度相对I/O多路复用要低。</li>
+<li>I/O多路复用是在一个进程内部处理多个逻辑流程，不用进行进程切换，性能较高，另外流程间共享信息简单。但是无法利用多核优势，另外，程序流程被事件处理切割成一个个小块，程序比较复杂，难于理解。</li>
+<li>线程运行在一个进程内部，由操作系统调度，切换成本较低，另外，他们共享进程的虚拟地址空间，线程间共享信息简单。但是线程安全问题导致线程学习曲线陡峭，而且易出错。</li>
+<li>协程由编程语言提供，由程序员控制进行切换，所以没有线程安全问题，可以用来处理状态机，并发请求等。但是无法利用多核优势。</li>
+</ol>
+<ul>
+<li><strong>上面的四种方案可以配合使用，我比较看好的是进程+协程的模式。</strong></li>
+</ul>
+<hr />
+<h4><a class="header" href="#about-monkey-patch" id="about-monkey-patch">About Monkey Patch</a></h4>
+<ul>
+<li>monkey patch指在运行时动态替换,一般是在startup的时候.</li>
+<li>例如：gevent会在最开头的地方gevent.monkey.patch_all();把标准库中的thread/socket等给替换掉.这样我们在后面使用socket的时候可以跟平常一样使用,无需修改任何代码,但是它变成非阻塞的了.</li>
+<li>Example:
+import json,后来发现ujson比自带json快了N倍,于是问题来了,难道几十个文件要一个个把import json改成import ujson as json吗?
+其实只需要在进程startup的地方monkey patch就行了.是影响整个进程空间的.同一进程空间中一个module只会被运行一次.下面是代码.</li>
+</ul>
+<p><code>main.py</code></p>
+<pre><code>import json
+import ujson
+def monkey_patch_json():
+  json.__name__ = 'ujson'
+  json.dumps = ujson.dumps
+  json.loads = ujson.loads
+
+monkey_patch_json()
+print 'main.py',json.__name__
+import sub
+</code></pre>
+<p><code>sub.py</code></p>
+<pre><code>import json
+print 'sub.py',json.__name__
+</code></pre>
+<p>运行main.py,可以看到都是输出'ujson',说明后面import的json是被patch了的. </p>
+<p><strong>最后注意不能单纯的json = ujson来替换</strong></p>
+<hr />
+<h4><a class="header" href="#scrapy" id="scrapy">Scrapy</a></h4>
+<ol>
+<li>
+<p>install
+<code>sudo pip install scrapy</code></p>
+</li>
+<li>
+<p>Create A Project
+<code>scrapy startproject tutorial</code></p>
+</li>
+</ol>
+<ul>
+<li>目录结构</li>
+</ul>
+<pre><code>tree tutorial/  
+tutorial/  
+├── scrapy.cfg  
+└── tutorial  
+    ├── __init__.py  
+    ├── items.py  
+    ├── pipelines.py  
+    ├── settings.py  
+    └── spiders  
+        └── __init__.py  
+</code></pre>
+<ul>
+<li>items.py: 定义项目的抓取条款准则（模型）　　</li>
+<li>spiders: 处理抓取实现　　</li>
+<li>piplines.py: 设计管道存储以及过滤抓取内容　　</li>
+</ul>
+<ol start="3">
+<li>shell中操作</li>
+</ol>
+<p><code>scrapy shell &quot;http://www.dmoz.org/Computers/Programming/Languages/Python/Books/&quot;</code></p>
+<p><a href="http://doc.scrapy.org/en/latest/intro/tutorial.html">Doc Address</a>
+<a href="http://scrapy-chs.readthedocs.org/zh_CN/latest/intro/tutorial.html">Reference Link</a></p>
+<hr />
+<h4><a class="header" href="#spynner包支持ajax动态加载web浏览python包" id="spynner包支持ajax动态加载web浏览python包">spynner包支持ajax动态加载web浏览python包</a></h4>
+<ul>
+<li>version: spynner 2.5 python &gt;=26  PyQt &gt; 443</li>
+<li><a href="https://pypi.python.org/pypi/spynner/2.5">Download</a></li>
+<li>Spynner Requirement<a href="http://baike.baidu.com/link?url=8s5iBLGKeZiJ0moKSmV5QSJbX2hwK14vqvHF0oL3S7IvzJPFFU6CYg4MdeRpa71UkpgQ_vNVD9w4DJOFcPRoy_">x11</a></li>
+</ul>
+<ol>
+<li>install x11  method :</li>
+</ol>
+<ul>
+<li>
+<p>sudo apt-get install xorg-dev, libxtst-dev</p>
+</li>
+<li>
+<p>sudo pip install spynner</p>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p>download the pyqt<a href="https://sourceforge.net/projects/pyqt/?source=typ_redirect">pyqt</a></p>
+</li>
+<li>
+<p>sudo apt-get install libqt4-dev</p>
+</li>
+<li>
+<p>sudo pip install PyQt</p>
+</li>
+<li>
+<p>sudo pip install sip</p>
+</li>
+</ol>
+<p><strong>WARING</strong>: Then run ipython or python with sudo if in vitrualevn source, OR you will be found the promote you PyQt4 not found!!!</p>
+<hr />
+<h4><a class="header" href="#pypi-server" id="pypi-server">pypi-server</a></h4>
+<p><code>注意：</code>pip install pypiserver，　安装后会有报错　import sets as Set 的错误 </p>
+<ul>
+<li>
+<p>解决办法：　<a href="https://pypi.python.org/pypi/pypiserver#downloads">Download</a></p>
+</li>
+<li>
+<p>安装 解压后的　requirements文件夹中的包</p>
+</li>
+</ul>
+<pre><code>user1@localhost:~$ sudo pypi-server -p 7001 ~/simple/
+serving on http://0.0.0.0:7001
+</code></pre>
+<hr />
+<h4><a class="header" href="#pil-histogram-统计的理解" id="pil-histogram-统计的理解">pil histogram 统计的理解</a></h4>
+<pre><code>    if the mode is RGB to open a image, 768 mean is Red grey list[0-255 pixs nums]+
+    Green grey list[0-255 pix nums]+ Blue grey list[0-255 pix numbs]
+    im is a Image object by RGB
+    In [59]: x = reduce(lambda x,y:x+y,im.histogram())
+    In [60]: x Out[60]: 47191725
+    In [61]: im.size Out[61]: (4731, 3325)
+    In [62]: 4731*3325 Out[62]: 15730575
+    In [63]: 4731*3325*3 Out[63]: 47191725
+    In [64]:
+    or other way:
+    r, g, b = im.split()
+    len(r.histogram()) = 256
+    len(g.histogram()) = 256
+    len(b.histogram()) = 256
+</code></pre>
+<hr />
+<h4><a class="header" href="#install-kivy-for-python-gui-aplication-develop" id="install-kivy-for-python-gui-aplication-develop">Install Kivy For Python GUI Aplication Develop</a></h4>
+<ol>
+<li>install cpython to support
+<code>sudo pip install cpython</code></li>
+<li>install pygame to support
+<code>sudo apt-get install python-pygame</code></li>
+<li>download the install file . <a href="https://kivy.org/">Adress</a></li>
+<li>install kivy
+<code>sudo python setup.py install</code></li>
+<li><a href="http://inclem.net/pages/kivy-crash-course/">Reference Link</a></li>
+</ol>
+<hr />
+<h4><a class="header" href="#sklearn-installdata-analysis" id="sklearn-installdata-analysis">Sklearn Install(Data Analysis)</a></h4>
+<p><a href="http://blog.sina.com.cn/s/blog_67331d610102vkvx.html">Reference Link</a></p>
+<hr />
+<h4><a class="header" href="#python-request" id="python-request">Python Request</a></h4>
+<p>[Reference Link]http://docs.python-requests.org/zh_CN/latest/user/quickstart.html</p>
+<hr />
+<h4><a class="header" href="#python-logging" id="python-logging">Python Logging</a></h4>
+<p><a href="https://www.loggly.com/docs/django-logs/">Reference Link</a></p>
+<hr />
+<h4><a class="header" href="#flask-study" id="flask-study">Flask Study</a></h4>
+<p><a href="http://www.pythondoc.com/flask-mega-tutorial/">Reference Link</a></p>
+<hr />
+<h4><a class="header" href="#django-celery" id="django-celery">Django Celery</a></h4>
+<p>python manage.py celery worker --loglevel=info </p>
+<hr />
+<h4><a class="header" href="#excel-handler" id="excel-handler">Excel handler</a></h4>
+<p>关于excel 模块</p>
+<pre><code>sudo pip install xlrd
+sudo pip install xlwt
+sudo pip install xlsxwriter
+</code></pre>
+<hr />
+<h4><a class="header" href="#virtualenv-python3--pip-install-pyton3-package" id="virtualenv-python3--pip-install-pyton3-package">VirtualEnv python3 &amp; Pip install pyton3 package</a></h4>
+<ol>
+<li><code>virtualenv -p python3 envname</code></li>
+<li><code>python -m pip install &lt;package-name&gt;</code></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../py/sort.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../py/tornado.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../py/sort.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../py/tornado.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

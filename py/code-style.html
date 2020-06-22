@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>code-style - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html" class="active"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: 开发过程的一些讨论
+date: 2016-11-03
+category: python
+tag: 思考</h2>
+<p><strong>摘要:</strong>
+最近和同事在代码编写规范上面和一些习惯上有一些讨论,这里做些点滴的记事,以备后
+来思考.这里不涉及工匠精神,个人觉得距离一个匠人还是很远的.还有就是修饰代码的过
+程本身也是在雕刻着自己./[坏笑]</p>
+<p>用python开发代码已经有两个年头了,一开始的时候写代码能实现功能就就是一个简单
+的目标,随后看团队中有经验的老司机写的代码,就觉得自己写的代码着实有些捉襟见肘,
+所以就套用别人写的代码,总结一些自己的经验.编写代码的目的有一些改变,先是要
+把功能实现,随后优化代码很明显的效率问题,然后讲究代码编写的位置,命名是不是符合
+团队开发的要求,是不是一眼就能看出来这个function或者class是做什么用的,如果看不出来
+也就别指望其他同事能用自己写的代码,当然很讨厌的事情就是,明明有一个同样的功能,而且
+方法名称是大部分同事都认同的,但是还是有人自己写自己的不去看别人的代码(当然排除那
+本就不看比人写的代码的情况),因为python 很灵活, 有些同事就不去写function了直接
+import拿过来,select,update,save 各种操作, 这一通修改过后也不去管什么信号触发问题
+最后导致代码维护起来很麻烦,明明有写好的代码可以调用,调用就好了, 还可以提高开发
+效率,提高代码复用;在各个文件中都有同一个model的修改操作,排错的时候只能用一个词
+形容,真叫是按下葫芦浮起瓢呀!</p>
+<p>万幸的是团队的所有同事有了同感,于是乎大家凑到一起讨论了一番,甚至是争执了一番.
+激烈的斗争之后总有写产物产生,在线上的代码里总有些变化,总归大家都是想好的.只不过
+大家的执念不同,导致的烦恼也就不一样了.</p>
+<h4><a class="header" href="#大家的共同认识" id="大家的共同认识">大家的共同认识</a></h4>
+<ol>
+<li>
+<p>命名称尽量不要用缩写
+之前有看过一篇文章叫<a href="http://scm-blog.com/2016/12/dont-use-abr.html">珍惜生命少用缩写</a>
+,还是很有意思的,当你准备使用缩写的时候,请注意
+咱们使用的缩写所有人都能明白(不是想象的明白而是真明白),至少是在自己的团队中大家
+都明白,不然的话还是写全的好.比如说之前看到第三方的接口kdniao的快递,在很多地方就
+使用了kdn来代替他,这种还是建议使用第三方自己的缩写(kdniao)就可以了.团队中没有
+熟悉你写的代码的在使用的过程中是很难用到同样功能的代码的,那只能造轮子了.与其自己
+开发过程中节省时间,倒不如大家都能看明白自己的代码,大家一起节省时间的好.</p>
+</li>
+<li>
+<p>修改model的代码一定要放到一个大家同认同的都知道的地方
+当项目代码越来越多,业务逻辑越来越繁杂,版本迭代频繁的时候代码维护工作也就越来越难
+,所以适当的话一些精力去规范代码的写法很有必要的,在规定或者是说公认的文件之外去
+操作数据是一个很不好的习惯,比如说在view中去update了一条记录是很难让人发现的一个
+行为.重构代码的时候还要去看view中的代码是否是业务逻辑的一部分,让人很反感.</p>
+</li>
+<li>
+<p>当你需要到别人的模块修改代码的时候一定要告诉那个人
+这个不是因为别的原因,大家辛辛苦苦写了一个function,自己或者其他同事用的很开心,一直
+没有出现过问题,某天突然不能用了,都去问负责这个模块的同事是怎么回事怎么有出bug了,
+查来查去,就是因为不熟悉的同事给修改了,而且是在个人使用的时候悄悄改掉了,也没有看
+哪里调用过.后来大家形成了共识,如果自己的代码或者业务上面的需求,需要在额外的模块
+有改动,应该告诉这个模块的负责人,让负责这个模块的人添加,如果这个负责人没有时间,
+那么自己先添加新的function去完成自己的业务需求,也不能修改,等到负责这个模块的人
+有时间后,让他帮忙修改或这检查下.当然最好的办法是在上线代码前做好codereview工作
+相关模块的同事一定要在一起.</p>
+</li>
+<li>
+<p>不要随便更新线上的代码
+这个执行起来还是很难的,因为要控制线上不出严重的bug是一件很难的事情,因为之前的项目
+没有做好codreview工作,也没有强制编写测试代码,所以经常在本地跑的很好的代码
+(自己认为的),部署到线上就会引发各种问题, 不去修改的话有不能使用,所以只好一遍一遍
+的修改,拿线上当做debug环境,还碰到过拿线上代码去打log查看log来debug的情况,如果说
+是很难的问题倒也没话说,不到半个小时就部署四五次之多.令人发指.后来leader就说每天
+没有特殊情况大家都是四点以后上线一次代码,注意这里是每天哦.大家都在说敏捷开发,但是
+能真正做好的公司没有多少家.</p>
+</li>
+</ol>
+<h4><a class="header" href="#apis约定的争论" id="apis约定的争论">apis约定的争论</a></h4>
+<p>公司给我们请了一个很牛逼的技术顾问,我们都喊他刁哥.一直以来项目上新的部署策划,技术
+难题甚至是业务难题我们都会咨询他的意见和建议.后台开发的leader也是对刁哥的想法和
+技术支持有着重的采纳和执行.我也跟着后面学习了很多新的东西和一些很好的思想.</p>
+<h5><a class="header" href="#先阐述一些问题" id="先阐述一些问题">先阐述一些问题:</a></h5>
+<p>很早以前我很少使用classmethod装饰器去做一些和class本身相关的事情,比如说创建某个特定的
+记录,执行一个和class关联紧密的function等等;后来使用的多了就觉的classmethod类似
+一个api去封装关于对应class的各种method.包括一些controler的method都放到这个里面来
+写.也就是所谓的fat model的方式,加上model本身有一些method和一些property还有写其他
+instance method,一个model文件就有上千行代码,阅读起来很费力.目录外面看很简单,但是
+访问到文件的时候就懵逼了,这么多代码怎么去阅读!这里不聊opp 怎么pk oop了哈.</p>
+<p>业务逻辑改动的很频繁,代码改动就很频繁,去修改对应的function实现业务逻辑,靠代码注释
+来约定这些业务逻辑的做法有些窘迫,因为你不知道这里的注释会不会被别人认为是不重要的
+代码而删掉,难不成在注释的后面写上 <code># do_abc()  # 禁止删除</code>这样的注释来保证.这个
+约束力太弱了.也经常遇到这种注释.代码管理上没有版本控制是一件很糟糕的事情.感觉就是
+<code>总是忙不过来</code>,整天改业务逻辑.如果说去写一个可以配置业务逻辑的模块,开发成本有比较
+高,况且在大多数创业公司来说,业务本身就是一个测试业务,说不定明天就没有这个业务逻辑
+了,开发了也是浪费.</p>
+<p>性能调优,正常的代码优化比如说将range替换成为xrange类似的这里就不谈了有兴趣可以看关
+于python的代码优化blog就可以了,如果在model上面写的方法比如说get_abc(),上面去做
+类似缓存的事情,还是需要考虑的;比如说在这里使用了cache我在线上想手动执行这个
+method的时候我取到的便是cache里面的内容了但是我又不想要cache里面的内容,当然解决
+办法总是有的,加个参数就可以解决.但是这样写的话还是和整个model关联起来,让人感觉没有
+那么pure.或者在写一个不带cache的相同的method就命名为get_abc_no_cache()吧;感觉这样
+的做法有写萌蠢的样子.</p>
+<p>django确实很好用,但是大家都说他很重,如果那天项目更换了django,那在model上面的
+关系紧密的method就很尴尬了,而且所有引用了model method的view基本也就成了垃圾了;
+我还是觉得刁老师说的一句话很有魅力;<strong>程序员的工作不是写一堆未来可能会被抛弃的或者被
+替换的代码,而是要写一些可以一直稳定输出价值的代码.</strong></p>
+<h5><a class="header" href="#解决方法" id="解决方法">解决方法</a></h5>
+<p>问题有很多,总归有办法解决;我们在每个django app里面都添加了一个package叫apis,大概
+目录结构是这样:</p>
+<pre><code>apis/
+├── __init__.py
+├── v1
+│   ├── __init__.py
+│   ├── model_a.py
+│   ├── model_b.py
+│   └── model_c.py
+└── v2
+
+</code></pre>
+<p>涉及到业务逻辑的代码,建议放到对应model的文件中,改动数据库的,添加缓存的,涉及到业务
+更替的都可以添加到这个结构里面.</p>
+<p>不管是不是这个apis的存在与否,分层开发也是刁哥阐述的一个重点,也就是说开发过程中,
+不是一个模块一个人独立完成,而是分层完成,从设计model,api编写,service封装,到view
+的编写是分配给不同的擅长与这些层次的人来开发,这样可以形成一个工作流程,层次更清晰
+开发人员更熟悉,开发效率更高,代码的稳定性也更高.</p>
+<p>以上所说的还是有具体情况具体分析的时候,代码重构迁移等等都是耗时耗力的事情.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../py/buildin.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../py/cprofile.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../py/buildin.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../py/cprofile.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

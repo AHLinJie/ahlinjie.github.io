@@ -1,0 +1,2736 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MySQL - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html" class="active"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: MySql基础
+date: 2015-10-18
+tag: mysql 
+category: database</h2>
+<p><strong>摘要:</strong>
+记录mysql数据基础操作内容,增删改查,日期操作,表操作,字段操作.
+信息函数,自定义函数,索引操作,数值预算等等数据库操作.存储过程和简单锁策略.</p>
+<h4><a class="header" href="#mysql-usually-sentence" id="mysql-usually-sentence">MySql Usually Sentence</a></h4>
+<ul>
+<li>
+<p>show index
+<code>show index from &lt;table-name&gt;</code></p>
+</li>
+<li>
+<p>update item field value
+<code>update  table_name set field=1 where id=28176</code></p>
+</li>
+<li>
+<p>select items witch is start with &quot;str&quot;
+<code>Select * from &lt;table_name&gt;  where &lt;field_name&gt; REGEXP &quot;^str&quot;;</code></p>
+</li>
+</ul>
+<hr />
+<h4><a class="header" href="#mysql-between" id="mysql-between">mysql between</a></h4>
+<p><code>mysql&gt; select * from clicks where id between 90 and 100;</code></p>
+<pre><code>```
++-----+--------+----------------------+---------------------+---------+---------------------+
+| id  | linkid | openid               | created             | isvalid | click_time          |
++-----+--------+----------------------+---------------------+---------+---------------------+
+|  90 |      1 | 12341122222222222222 | 2015-08-29 10:47:18 |       0 | 2015-08-29 10:47:18 |
+|  91 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  92 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  93 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  94 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  95 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  96 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  97 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  98 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+|  99 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
+| 100 |      1 | 12341122222222222222 | 2015-08-29 10:51:36 |       0 | 2015-08-29 10:51:36 |
++-----+--------+----------------------+---------------------+---------+---------------------+
+11 rows in set (0.00 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#assign-prompt" id="assign-prompt">Assign Prompt</a></h4>
+<p><code>mysql -u root -p --prompt \h</code>  # --prompt 表示设置提示符是什么  \h 表示localhost</p>
+<pre><code>\D  完整日期
+\d  当前数据库
+\h  当前主机
+\u  当前用户
+</code></pre>
+<p><code>mysql -u root -p</code>
+登陆后输入如下命令: prompt \u@\h \d&gt;</p>
+<hr />
+<h4><a class="header" href="#base" id="base">Base</a></h4>
+<pre><code>root@localhost mydb&gt;select user();
++----------------+
+| user()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+
+root@localhost mydb&gt;select version();
++------------+
+| version()  |
++------------+
+| 5.6.21-log |
++------------+
+1 row in set (0.00 sec)
+
+root@localhost mydb&gt;
+root@localhost mydb&gt;select now();
++---------------------+
+| now()               |
++---------------------+
+| 2015-04-05 20:52:40 |
++---------------------+
+1 row in set (0.00 sec)
+
+root@localhost mydb&gt;
+
+
+root@localhost mydb&gt;CREATE DATABASE IF NOT EXISTS muke;
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+root@localhost mydb&gt;SHOW WARNINGS;    # 查看警告信息
++-------+------+-----------------------------------------------+
+| Level | Code | Message                                       |
++-------+------+-----------------------------------------------+
+| Note  | 1007 | Can't create database 'muke'; database exists |
++-------+------+-----------------------------------------------+
+1 row in set (0.00 sec)
+
+root@localhost mydb&gt;
+
+root@localhost mydb&gt;SHOW CREATE DATABASE muke; # 查看新建数据库的时候是用的什么命令  查看是什么编码方式
++----------+---------------------------------------------------------------+
+| Database | Create Database                                               |
++----------+---------------------------------------------------------------+
+| muke     | CREATE DATABASE `muke` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++----------+---------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+
+root@localhost mydb&gt;CREATE DATABASE IF NOT EXISTS t2 CHARACTER SET gbk;  # 指定编码模式
+Query OK, 1 row affected (0.00 sec)
+
+root@localhost mydb&gt;SHOW CREATE DATABASE t2;    # 查看编码模式
++----------+------------------------------------------------------------+
+| Database | Create Database                                            |
++----------+------------------------------------------------------------+
+| t2       | CREATE DATABASE `t2` /*!40100 DEFAULT CHARACTER SET gbk */ |
++----------+------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+root@localhost mydb&gt;
+root@localhost mydb&gt;ALTER DATABASE t2 CHARACTER SET = UTF8;     # 修改编码方式
+Query OK, 1 row affected (0.01 sec)
+
+root@localhost mydb&gt;SHOW CREATE DATABASE t2;    # 查看编码方式
++----------+-------------------------------------------------------------+
+| Database | Create Database                                             |
++----------+-------------------------------------------------------------+
+| t2       | CREATE DATABASE `t2` /*!40100 DEFAULT CHARACTER SET utf8 */ |
++----------+-------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+root@localhost mydb&gt;
+root@localhost mydb&gt;DROP DATABASE IF EXISTS t2;# 删除数据库（如果存在的话）
+Query OK, 0 rows affected (0.06 sec)
+</code></pre>
+<hr />
+<h4><a class="header" href="#data-types" id="data-types">Data Types</a></h4>
+<ul>
+<li>日期时间类型在实际开发的过程中用的不是很多，多是以时间戳的形式使用</li>
+</ul>
+<hr />
+<h4><a class="header" href="#table" id="table">Table</a></h4>
+<ul>
+<li>mysql -u root -p -P 3306 -h 127.0.0.1    # 登陆连接数据库</li>
+</ul>
+<pre><code>mysql&gt;USE muke;
+Database changed
+mysql&gt;
+mysql&gt; SELECT DATABASE();    # 查看当前使用的数据库
++------------+
+| DATABASE() |
++------------+
+| muke       |
++------------+
+1 row in set (0.00 sec)
+</code></pre>
+<ol>
+<li>
+<p>Create table</p>
+<pre><code>mysql&gt; CREATE TABLE IF NOT EXISTS tb1(
+    -&gt; username VARCHAR(20) NOT NULL,
+    -&gt; age TINYINT UNSIGNED,
+    -&gt; salary FLOAT(8,2) UNSIGNED
+    -&gt; );
+Query OK, 0 rows affected (0.34 sec)
+</code></pre>
+</li>
+<li>
+<p>Show table</p>
+<pre><code>mysql&gt; SHOW TABLES;    # 查看数据表
++----------------+
+| Tables_in_muke |
++----------------+
+| tb1            |
++----------------+
+1 row in set (0.00 sec)
+</code></pre>
+<pre><code>mysql&gt; SHOW TABLES FROM mysql;    # 从mysql数据中查看表
++---------------------------+
+| Tables_in_mysql           |
++---------------------------+
+| columns_priv              |
+| db                        |
+| event                     |
+| func                      |
+| general_log               |
+| help_category             |
+| help_keyword              |
+| help_relation             |
+| help_topic                |
+| innodb_index_stats        |
+| innodb_table_stats        |
+| ndb_binlog_index          |
+| plugin                    |
+| proc                      |
+| procs_priv                |
+| proxies_priv              |
+| servers                   |
+| slave_master_info         |
+| slave_relay_log_info      |
+| slave_worker_info         |
+| slow_log                  |
+| tables_priv               |
+| time_zone                 |
+| time_zone_leap_second     |
+| time_zone_name            |
+| time_zone_transition      |
+| time_zone_transition_type |
+| user                      |
++---------------------------+
+28 rows in set (0.09 sec)
+</code></pre>
+</li>
+<li>
+<p>Show table colums</p>
+<pre><code>mysql&gt; SHOW COLUMNS FROM tb1;        # 查看数据表的结构(列名称)和数据类型
++----------+---------------------+------+-----+---------+-------+
+| Field    | Type                | Null | Key | Default | Extra |
++----------+---------------------+------+-----+---------+-------+
+| username | varchar(20)         | NO  |     | NULL    |       |
+| age      | tinyint(3) unsigned | YES  |     | NULL    |       |
+| salary   | float(8,2) unsigned | YES  |     | NULL    |       |
++----------+---------------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+</code></pre>
+</li>
+<li>
+<p>Insert data into table</p>
+<pre><code>mysql&gt; INSERT tb1 VALUES('TOM',25,7863.65);
+Query OK, 1 row affected (0.10 sec)
+mysql&gt; INSERT tb1 VALUES('MAX',25,7863.65);
+Query OK, 1 row affected (0.06 sec)
+mysql&gt; INSERT tb1(username,salary) VALUES('Linjie',8000);    # 指定列名称插入内容
+Query OK, 1 row affected (0.09 sec)
+mysql&gt; SELECT * FROM tb1;
++----------+------+---------+
+| username | age  | salary  |
++----------+------+---------+
+| TOM      |   25 | 7863.65 |
+| MAX      |   25 | 7863.65 |
+| Linjie   | NULL | 8000.00 |
++----------+------+---------+
+</code></pre>
+</li>
+</ol>
+<hr />
+<h4><a class="header" href="#key" id="key">Key</a></h4>
+<ol>
+<li>
+<p>Primary key</p>
+<pre><code>
+mysql&gt; CREATE TABLE tb3 (
+    -&gt; id SMALLINT UNSIGNED  AUTO_INCREMENT PRIMARY KEY,
+    -&gt; username VARCHAR(20)
+    -&gt; );
+Query OK, 0 rows affected (0.62 sec)
+
+mysql&gt; SHOW COLUMNS FROM tb3;
++----------+----------------------+------+-----+---------+----------------+
+| Field    | Type                 | Null | Key | Default | Extra          |
++----------+----------------------+------+-----+---------+----------------+
+| id       | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| username | varchar(20)          | YES  |     | NULL    |                |
++----------+----------------------+------+-----+---------+----------------+
+
+mysql&gt; INSERT tb3 (username) VALUES('tom');
+Query OK, 1 row affected (0.08 sec)
+
+mysql&gt; INSERT tb3 (username) VALUES('tom2');
+Query OK, 1 row affected (0.07 sec)
+
+mysql&gt; INSERT tb3 (username) VALUES('MAX');
+Query OK, 1 row affected (0.06 sec)
+
+mysql&gt; SELECT * FROM tb3;
++----+----------+
+| id | username |
++----+----------+
+|  1 | tom      |
+|  2 | tom2     |
+|  3 | MAX      |
++----+----------+
+</code></pre>
+</li>
+<li>
+<p>Unique key</p>
+<p>主键在一张表中只能有一个且不能为空且唯一，unique key 一张表可以多个并且可以有空值，保证字段的唯一性.</p>
+<pre><code>mysql&gt; CREATE TABLE tb4
+    -&gt; (
+    -&gt; id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    -&gt; username VARCHAR(20) NOT NULL UNIQUE KEY,
+    -&gt; age TINYINT UNSIGNED);
+Query OK, 0 rows affected (0.50 sec)
+
+mysql&gt; SHOW COLUMNS FROM tb4;
++----------+----------------------+------+-----+---------+----------------+
+| Field    | Type                 | Null | Key | Default | Extra          |
++----------+----------------------+------+-----+---------+----------------+
+| id       | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| username | varchar(20)          | NO   | UNI | NULL    |                |
+| age      | tinyint(3) unsigned  | YES  |     | NULL    |                |
++----------+----------------------+------+-----+---------+----------------+
+mysql&gt; INSERT tb4(username, age)VALUES('TOM',22) ;
+mysql&gt; INSERT tb4(username, age)VALUES('TOM',22);
+ERROR 1062 (23000): Duplicate entry 'TOM' for key 'username'   # 唯一性约束
+
+</code></pre>
+</li>
+<li>
+<p>Default </p>
+<pre><code>mysql&gt; CREATE TABLE tb6(
+    -&gt; id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    -&gt; username VARCHAR(20) NOT NULL UNIQUE KEY,
+    -&gt; sex ENUM('M','F','S') DEFAULT 'S'
+    -&gt; );
+Query OK, 0 rows affected (0.31 sec)
+
+mysql&gt; SHOW COLUMNS FROM tb6;
++----------+----------------------+------+-----+---------+----------------+
+| Field    | Type                 | Null | Key | Default | Extra          |
++----------+----------------------+------+-----+---------+----------------+
+| id       | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| username | varchar(20)          | NO   | UNI | NULL    |                |
+| sex      | enum('M','F','S')    | YES  |     | S       |                |
++----------+----------------------+------+-----+---------+----------------+
+3 rows in set (0.02 sec)
+
+mysql&gt;
+mysql&gt; INSERT tb6 (username) VALUES('TOM');
+Query OK, 1 row affected (0.06 sec)
+
+mysql&gt; SELECT * FROM tb6;
++----+----------+------+
+| id | username | sex  |
++----+----------+------+
+|  1 | TOM      | S    |
++----+----------+------+
+1 row in set (0.00 sec)
+</code></pre>
+</li>
+<li>
+<p>Forning key</p>
+<p>4.1 父表和子表有相同的数据引擎且为InnoDB，</p>
+<p>4.2 外键列和参照列必须具有相似的数据类型，且数字的长度和有无符号必须相同，字符长度可以不同</p>
+<p>4.3 外键列和参照列必须创建索引，如果参照列没有索引MySQL会自动创建索引。</p>
+<pre><code>root@127.0.0.1 muke&gt;CREATE TABLE province(
+    -&gt; id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; pname VARCHAR(20) NOT NULL
+    -&gt; );
+Query OK, 0 rows affected (0.55 sec)
+
+root@127.0.0.1 muke&gt;
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE provience;
+ERROR 1146 (42S02): Table 'muke.provience' doesn't exist
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE province;
+
+| Table    | Create Table|
+| province | CREATE TABLE `province` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `pname` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
+root@127.0.0.1 muke&gt;CREATE TABLE users(
+    -&gt; id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; username VARCHAR(10) NOT NULL,
+    -&gt; pid SMALLINT UNSIGNED,
+    -&gt; FOREIGN KEY (pid) REFERENCES province(id)
+    -&gt; );
+Query OK, 0 rows affected (0.29 sec)
+
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE users;
+
+| Table | Create Table|
+| users | CREATE TABLE `users` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(10) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `province` (`id`)   # 外键参照列
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
+root@127.0.0.1 muke&gt;SHOW INDEXES FROM province \G;   # \G是表示以网格形式显示   这里的参照咧自动生成索引
+*************************** 1. row ***************************
+        Table: province
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+1 row in set (0.00 sec)
+
+ERROR:
+No query specified
+
+root@127.0.0.1 muke&gt;
+
+root@127.0.0.1 muke&gt;SHOW INDEXES FROM users \G;
+*************************** 1. row ***************************
+        Table: users
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: id
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 2. row ***************************
+        Table: users
+   Non_unique: 1
+     Key_name: pid
+ Seq_in_index: 1
+  Column_name: pid
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+2 rows in set (0.00 sec)
+
+</code></pre>
+</li>
+<li>
+<p>外键约束的参照操作</p>
+<pre><code>root@127.0.0.1 muke&gt;CREATE TABLE users1(
+    -&gt; id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; username VARCHAR(10) NOT NULL,
+    -&gt; pid SMALLINT UNSIGNED,
+    -&gt; FOREIGN KEY (pid) REFERENCES province(id) ON DELETE CASCADE
+    -&gt; );
+Query OK, 0 rows affected (0.31 sec)
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE users1;
+| Table  | Create Table|
+| users1 | CREATE TABLE `users1` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(10) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`),
+  CONSTRAINT `users1_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `province` (`id`) ON
+ DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+1 row in set (0.00 sec)
+
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE users1 \G;
+*************************** 1. row ***************************
+       Table: users1
+Create Table: CREATE TABLE `users1` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(10) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `pid` (`pid`),
+  CONSTRAINT `users1_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `province` (`id`) ON
+ DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+1 row in set (0.00 sec)
+
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;
+root@127.0.0.1 muke&gt;INSERT province (pname) VALUES('A');
+Query OK, 1 row affected (0.07 sec)
+
+root@127.0.0.1 muke&gt;INSERT province (pname) VALUES('B');
+Query OK, 1 row affected (0.07 sec)
+
+root@127.0.0.1 muke&gt;INSERT province (pname) VALUES('C');
+Query OK, 1 row affected (0.07 sec)
+
+root@127.0.0.1 muke&gt;SELECT * FROM province;
++----+-------+
+| id | pname |
++----+-------+
+|  1 | A     |
+|  2 | B     |
+|  3 | C     |
++----+-------+
+
+root@127.0.0.1 muke&gt;INSERT user1 (username, pid)VALUES('john',7);
+ERROR 1146 (42S02): Table 'muke.user1' doesn't exist
+root@127.0.0.1 muke&gt;INSERT users1 (username, pid)VALUES('john',1);
+Query OK, 1 row affected (0.07 sec)
+
+root@127.0.0.1 muke&gt;INSERT users1 (username, pid)VALUES('john',7);    # 没有对应的参照列 
+ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint f
+ails (`muke`.`users1`, CONSTRAINT `users1_ibfk_1` FOREIGN KEY (`pid`) REFERENCES
+ `province` (`id`) ON DELETE CASCADE)
+root@127.0.0.1 muke&gt;INSERT users1 (username, pid)VALUES('MAX',3);
+Query OK, 1 row affected (0.04 sec)
+
+root@127.0.0.1 muke&gt;SELECT * FROM users1;
++----+----------+------+
+| id | username | pid  |
++----+----------+------+
+|  1 | john     |    1 |
+|  3 | MAX      |    3 |
++----+----------+------+
+2 rows in set (0.00 sec)        # 这里没有id为2的是因为，&gt;INSERT users1 (username, pid)VALUES('john',7);的时候自增长了1
+
+root@127.0.0.1 muke&gt;
+root@127.0.0.1 muke&gt;DELETE FROM province WHERE id=3;
+Query OK, 1 row affected (0.06 sec)
+
+root@127.0.0.1 muke&gt;SELECT * FROM user1;        #ON DELETE CASCADE 的作用子表中删除情况的更新
+ERROR 1146 (42S02): Table 'muke.user1' doesn't exist
+root@127.0.0.1 muke&gt;SELECT * FROM users1;
++----+----------+------+
+| id | username | pid  |
++----+----------+------+
+|  1 | john     |    1 |
++----+----------+------+
+</code></pre>
+<p><strong>注意</strong>实际的项目开发中，不去定义物理的外键，多去定义逻辑外键，很少用FOREIGN KEY来定义</p>
+<p><strong>注意</strong>:实际开发过程中很少用 表级约束多用列级约束。</p>
+<pre><code>root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users1;
++----------+----------------------+------+-----+---------+----------------+
+| Field    | Type                 | Null | Key | Default | Extra          |
++----------+----------------------+------+-----+---------+----------------+
+| id       | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| username | varchar(10)          | NO   |     | NULL    |                |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |                |
++----------+----------------------+------+-----+---------+----------------+
+
+</code></pre>
+</li>
+<li>
+<p>Table modity</p>
+<pre><code>    root@127.0.0.1 muke&gt;ALTER TABLE users1 ADD age TINYINT UNSIGNED NOT NULL DEFAULT 10;
+    Query OK, 0 rows affected (1.08 sec)
+    Records: 0  Duplicates: 0  Warnings: 0
+    
+    root@127.0.0.1 muke&gt;ALTER TABLE users1 ADD passwd VARCHARA(20) NOT NULL AFTER username;
+    ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+    corresponds to your MySQL server version for the right syntax to use near 'VARCH
+    ARA(20) NOT NULL AFTER username' at line 1
+    root@127.0.0.1 muke&gt;ALTER TABLE users1 ADD passwd VARCHAR(20) NOT NULL AFTER username;
+    Query OK, 0 rows affected (1.09 sec)
+    Records: 0  Duplicates: 0  Warnings: 0
+    
+</code></pre>
+<p><strong>注意</strong>:添加多列的时候只能添加到表的最后面。</p>
+<ul>
+<li>删除列：</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users1 DROP passwd;
+Query OK, 0 rows affected (1.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;SHOW COLUMnS FROM users1;
++----------+----------------------+------+-----+---------+----------------+
+| Field    | Type                 | Null | Key | Default | Extra          |
++----------+----------------------+------+-----+---------+----------------+
+| id       | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| username | varchar(10)          | NO   |     | NULL    |                |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |                |
+| age      | tinyint(3) unsigned  | NO   |     | 10      |                |
++----------+----------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+</code></pre>
+<ul>
+<li>添加主键约束：</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;CREATE TABLE users2(
+-&gt; username VARCHAR(20) NOT NULL,
+-&gt; pid SMALLINT UNSIGNED
+-&gt; );
+Query OK, 0 rows affected (0.71 sec)
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 ADD id SMALLINT UNSIGNED;
+Query OK, 0 rows affected (0.69 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;ALTER TABLE users2 ADD CONSTRAINT PK_user2_id PRIMARY KEY (id);    #  CONSTRAINT PK_user2_id 表示添加操作的说明
+Query OK, 0 rows affected (0.76 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+</code></pre>
+<ul>
+<li>添加唯一约束：</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 ADD UNIQUE(username);
+Query OK, 0 rows affected (0.32 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE users2;
+| users2 | CREATE TABLE `users2` (
+  `username` varchar(20) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  `id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+</code></pre>
+<ul>
+<li>添加外键约束：</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;SHOW COLUMNS from  province;
++-------+----------------------+------+-----+---------+----------------+
+| Field | Type                 | Null | Key | Default | Extra          |
++-------+----------------------+------+-----+---------+----------------+
+| id    | smallint(5) unsigned | NO   | PRI | NULL    | auto_increment |
+| pname | varchar(20)          | NO   |     | NULL    |                |
++-------+----------------------+------+-----+---------+----------------+
+
+root@127.0.0.1 muke&gt;ALTER TABLE users2 ADD FOREIGN KEY (pid) REFERENCES province (id);
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE users2;
+| users2 | CREATE TABLE `users2` (
+  `username` varchar(20) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  `id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  KEY `pid` (`pid`),
+  CONSTRAINT `users2_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `province` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+</code></pre>
+<ul>
+<li>添加默认约束：</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 ADD age TINYINT UNSIGNED NOT NULL;
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| username | varchar(20)          | NO   | UNI | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| id       | smallint(5) unsigned | NO   | PRI | 0       |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+
+root@127.0.0.1 muke&gt;ALTER TABLE users2 ALTER age SET DEFAULT 15;
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| username | varchar(20)          | NO   | UNI | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| id       | smallint(5) unsigned | NO   | PRI | 0       |       |
+| age      | tinyint(3) unsigned  | NO   |     | 15      |       |
++----------+----------------------+------+-----+---------+-------+
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 ALTER age DROP DEFAULT;
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| username | varchar(20)          | NO   | UNI | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| id       | smallint(5) unsigned | NO   | PRI | 0       |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| username | varchar(20)          | NO   | UNI | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| id       | smallint(5) unsigned | NO   | PRI | 0       |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 DROP  PRIMARY KEY;
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| username | varchar(20)          | NO   | PRI | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| id       | smallint(5) unsigned | NO   |     | 0       |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+
+root@127.0.0.1 muke&gt;SHOW INDEXES FROM users2 \G;
+*************************** 1. row ***************************
+        Table: users2
+   Non_unique: 0
+     Key_name: username          # 约束名称
+ Seq_in_index: 1
+  Column_name: username
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null:
+   Index_type: BTREE
+      Comment:
+Index_comment:
+*************************** 2. row ***************************
+        Table: users2
+   Non_unique: 1
+     Key_name: pid
+ Seq_in_index: 1
+  Column_name: pid
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+2 rows in set (0.00 sec)
+</code></pre>
+<pre><code>ERROR:
+No query specified
+
+root@127.0.0.1 muke&gt;ALTER TABLE users2 DROP INDEX username;        #  删除索引
+Query OK, 0 rows affected (0.89 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| username | varchar(20)          | NO   |     | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| id       | smallint(5) unsigned | NO   |     | 0       |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+root@127.0.0.1 muke&gt;SHOW INDExES FROM users2 \G;        # 查看索引
+*************************** 1. row ***************************
+        Table: users2
+   Non_unique: 1
+     Key_name: pid
+ Seq_in_index: 1
+  Column_name: pid
+    Collation: A
+  Cardinality: 0
+     Sub_part: NULL
+       Packed: NULL
+         Null: YES
+   Index_type: BTREE
+      Comment:
+Index_comment:
+1 row in set (0.00 sec)
+ERROR:
+No query specified
+</code></pre>
+<ul>
+<li>删除外键约束：</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;SHOW CREATE TABLE users2;
+| users2 | CREATE TABLE `users2` (
+  `username` varchar(20) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  `id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `age` tinyint(3) unsigned NOT NULL,
+  KEY `pid` (`pid`),
+  CONSTRAINT `users2_ibfk_1` FOREIGN KEY (`pid`) REFERENCES `province` (`id`)    # 外键名称
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
+root@127.0.0.1 muke&gt;ALTER TABLE users2 DROP FOREIGN KEY users2_ibfk_1;   # 删除外键
+Query OK, 0 rows affected (0.13 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;SHOW CREATE TABLE users2;
+| users2 | CREATE TABLE `users2` (
+  `username` varchar(20) NOT NULL,
+  `pid` smallint(5) unsigned DEFAULT NULL,
+  `id` smallint(5) unsigned NOT NULL DEFAULT '0',
+  `age` tinyint(3) unsigned NOT NULL,
+  KEY `pid` (`pid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+</code></pre>
+<ul>
+<li>数据类型有问题，位置存在问题，</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 MODIFY id SMALLINT UNSIGNED NOT NULL FIRST;
+Query OK, 0 rows affected (0.45 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| id       | smallint(5) unsigned | NO   |     | NULL    |       |
+| username | varchar(20)          | NO   |     | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+root@127.0.0.1 muke&gt;ALTER TABLE users2 MODIFY id TINYINT UNSIGNED NOT NULL FIRST        #  注意这里如果从小的数据类型修改到大的数据类型 有可能会造成数据丢失
+;
+Query OK, 0 rows affected (0.97 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+----------------------+------+-----+---------+-------+
+| Field    | Type                 | Null | Key | Default | Extra |
++----------+----------------------+------+-----+---------+-------+
+| id       | tinyint(3) unsigned  | NO   |     | NULL    |       |
+| username | varchar(20)          | NO   |     | NULL    |       |
+| pid      | smallint(5) unsigned | YES  | MUL | NULL    |       |
+| age      | tinyint(3) unsigned  | NO   |     | NULL    |       |
++----------+----------------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 CHANGE pid p_id TINYINT UNSIGNED NOT NULL;        # CHANGE 的功能更多（可以修改列名称）
+Query OK, 0 rows affected (0.87 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+root@127.0.0.1 muke&gt;SHOW COLUMNS FROM users2;
++----------+---------------------+------+-----+---------+-------+
+| Field    | Type                | Null | Key | Default | Extra |
++----------+---------------------+------+-----+---------+-------+
+| id       | tinyint(3) unsigned | NO   |     | NULL    |       |
+| username | varchar(20)         | NO   |     | NULL    |       |
+| p_id     | tinyint(3) unsigned | NO   | MUL | NULL    |       |
+| age      | tinyint(3) unsigned | NO   |     | NULL    |       |
++----------+---------------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
+</code></pre>
+<ul>
+<li>
+<p>修改数据表的名称：</p>
+<p><strong>注意：尽量少去修改数据表名称  ，因为有索引已经存储过程的影响。</strong></p>
+</li>
+</ul>
+<pre><code>root@127.0.0.1 muke&gt;ALTER TABLE users2 RENAME users3;
+Query OK, 0 rows affected (0.19 sec)
+
+root@127.0.0.1 muke&gt;show tables;
++----------------+
+| Tables_in_muke |
++----------------+
+| province       |
+| tb1            |
+| tb3            |
+| tb4            |
+| tb6            |
+| users          |
+| users1         |
+| users3         |
++----------------+
+8 rows in set (0.00 sec)
+</code></pre>
+<pre><code>root@127.0.0.1 muke&gt;RENAME  TABLE users3 TO users2;        # 可以多张表修改
+Query OK, 0 rows affected (0.20 sec)
+
+root@127.0.0.1 muke&gt;show tables;
++----------------+
+| Tables_in_muke |
++----------------+
+| province       |
+| tb1            |
+| tb3            |
+| tb4            |
+| tb6            |
+| users          |
+| users1         |
+| users2         |
++----------------+
+8 rows in set (0.00 sec)
+</code></pre>
+</li>
+</ol>
+<hr />
+<h4><a class="header" href="#insert-语句" id="insert-语句">INSERT 语句</a></h4>
+<pre><code>root@127.0.0.1 muke&gt;CREATE TABLE users4(
+    -&gt; id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; username VARCHAR(20) NOT NULL,
+    -&gt; passwd VARCHAR(20) NOT NULL,
+    -&gt; age TINYINT UNSIGNED NOT NULL DEFAULT 18,
+    -&gt; sex BOOLEAN
+    -&gt; );
+Query OK, 0 rows affected (0.41 sec)
+
+...
+
+mysql&gt; SELECT * FROM users4;
++----+----------+--------+-----+------+
+| id | username | passwd | age | sex  |
++----+----------+--------+-----+------+
+|  1 | JOHN     | 123    |  24 |    1 |
+|  2 | JOHN     | 123    |  24 |    1 |
+|  3 | MAX      | 223    |  24 |    1 |
+|  4 | JOHN     | 123    |  22 |    1 |
+|  5 | JOHN     | 123    |  18 |    1 |
++----+----------+--------+-----+------+
+5 rows in set (0.00 sec)
+
+mysql&gt;
+mysql&gt; INSERT users4 VALUES(NULL,'lINJIE','520',25,1),(NULL,'ZHANG',md5'112',24,1);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MySQL server version for the right syntax to use near ''112'
+,24,1)' at line 1
+mysql&gt; INSERT users4 VALUES(NULL,'lINJIE','520',25,1),(NULL,'ZHANG',md5('112'),2
+4,1);
+ERROR 1406 (22001): Data too long for column 'passwd' at row 2    # 提示不够长，无法存储
+mysql&gt;
+mysql&gt; ALTER TABLE users4 MODIFY passwd VARCHAR(32) NOT NULL;
+Query OK, 5 rows affected (0.87 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+mysql&gt; INSERT users4 VALUES(NULL,'lINJIE','520',25,1),(NULL,'ZHANG',md5('112'),24,1);
+Query OK, 2 rows affected (0.08 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql&gt; SELECT * FROM users4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+|  1 | JOHN     | 123                              |  24 |    1 |
+|  2 | JOHN     | 123                              |  24 |    1 |
+|  3 | MAX      | 223                              |  24 |    1 |
+|  4 | JOHN     | 123                              |  22 |    1 |
+|  5 | JOHN     | 123                              |  18 |    1 |
+|  8 | lINJIE   | 520                              |  25 |    1 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    1 |
++----+----------+----------------------------------+-----+------+
+7 rows in set (0.00 sec)
+</code></pre>
+<pre><code>mysql&gt; SHOW CREATE TABLE users4;
+| users4 | CREATE TABLE `users4` (
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL,
+  `passwd` varchar(32) NOT NULL,
+  `age` tinyint(3) unsigned NOT NULL DEFAULT '18',
+  `sex` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 |
+</code></pre>
+<ul>
+<li>可以使用子查询的插入语句 INSERT SET(只能插入一条记录)：</li>
+</ul>
+<pre><code>```
+mysql&gt; INSERT users4 SET username='wutian',passwd=md5('abc');
+mysql&gt; SELECT * FROM users4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+|  1 | JOHN     | 123                              |  24 |    1 |
+|  2 | JOHN     | 123                              |  24 |    1 |
+|  3 | MAX      | 223                              |  24 |    1 |
+|  4 | JOHN     | 123                              |  22 |    1 |
+|  5 | JOHN     | 123                              |  18 |    1 |
+|  8 | lINJIE   | 520                              |  25 |    1 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    1 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 | NULL |
++----+----------+----------------------------------+-----+------+
+```
+
+- 单表更新：
+
+```
+mysql&gt; UPDATE users4 SET age = age -5,sex = 0;
+mysql&gt; SELECT * FROM users4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+|  1 | JOHN     | 123                              |  24 |    0 |
+|  2 | JOHN     | 123                              |  24 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  4 | JOHN     | 123                              |  22 |    0 |
+|  5 | JOHN     | 123                              |  18 |    0 |
+|  8 | lINJIE   | 520                              |  25 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 |    0 |
++----+----------+----------------------------------+-----+------+
+8 rows in set (0.00 sec)
+
+mysql&gt; UPDATE users4 SET age = age +3 WHERE id %2 = 0;
+Query OK, 4 rows affected (0.06 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql&gt; SELECT * FROM users4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+|  1 | JOHN     | 123                              |  24 |    0 |
+|  2 | JOHN     | 123                              |  27 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  4 | JOHN     | 123                              |  25 |    0 |
+|  5 | JOHN     | 123                              |  18 |    0 |
+|  8 | lINJIE   | 520                              |  28 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
++----+----------+----------------------------------+-----+------+
+8 rows in set (0.00 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#删除记录delete" id="删除记录delete">删除记录DELETE:</a></h4>
+<pre><code>- 单表删除
+
+```
+mysql&gt;DELETE FROM users4 WHERE id = 6;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; SELECT * FROM users4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+|  1 | JOHN     | 123                              |  24 |    0 |
+|  2 | JOHN     | 123                              |  27 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  4 | JOHN     | 123                              |  25 |    0 |
+|  5 | JOHN     | 123                              |  18 |    0 |
+|  8 | lINJIE   | 520                              |  28 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
++----+----------+----------------------------------+-----+------+
+8 rows in set (0.00 sec)
+mysql&gt; INSERT users4 SET username='wutian',passwd=md5('abc');
+Query OK, 1 row affected (0.05 sec)
+
+mysql&gt; SELECT * FROM users4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+|  1 | JOHN     | 123                              |  24 |    0 |
+|  2 | JOHN     | 123                              |  27 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  4 | JOHN     | 123                              |  25 |    0 |
+|  5 | JOHN     | 123                              |  18 |    0 |
+|  8 | lINJIE   | 520                              |  28 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
+| 11 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 | NULL |
++----+----------+----------------------------------+-----+------+
+
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#select" id="select">SELECT</a></h4>
+<pre><code>- 查询函数
+
+```
+mysql&gt; SELECT VERSION();
++------------+
+| VERSION()  |
++------------+
+| 5.6.21-log |
++------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2015-04-06 14:32:49 |
++---------------------+
+1 row in set (0.00 sec)
+```
+
+```    
+mysql&gt; SELECT sex FROM users4 GROUP BY sex;
++------+
+| sex  |
++------+
+| NULL |
+|    0 |
++------+
+2 rows in set (0.00 sec)
+```
+
+- 分组条件指定：
+
+```
+mysql&gt; SELECT id,age FROM users4 GROUP BY id HAVING age &gt; 22;
++----+-----+
+| id | age |
++----+-----+
+|  1 |  24 |
+|  2 |  27 |
+|  3 |  24 |
+|  4 |  25 |
+|  8 |  28 |
+|  9 |  24 |
++----+-----+
+6 rows in set (0.00 sec)
+
+mysql&gt; SELECT sex FROM users4 GROUP BY id HAVING count(id) &gt;= 3;
+Empty set (0.00 sec)
+
+mysql&gt; SELECT sex FROM users4 GROUP BY id HAVING count(id) &gt;= 2;
+Empty set (0.00 sec)
+
+mysql&gt; SELECT age FROM users4 GROUP BY id HAVING count(id) &gt;= 2;
+Empty set (0.00 sec)
+```
+
+
+- order by排序：
+
+```
+mysql&gt; SELECT * FROM users4 ORDER BY id DESC ;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+| 11 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 | NULL |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+|  8 | lINJIE   | 520                              |  28 |    0 |
+|  5 | JOHN     | 123                              |  18 |    0 |
+|  4 | JOHN     | 123                              |  25 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  2 | JOHN     | 123                              |  27 |    0 |
+|  1 | JOHN     | 123                              |  24 |    0 |
++----+----------+----------------------------------+-----+------+
+9 rows in set (0.00 sec)
+
+mysql&gt; SELECT * FROM users4 ORDER BY age,id DESC;    # 年龄相同则按照id降序排列
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+| 11 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 | NULL |
+|  5 | JOHN     | 123                              |  18 |    0 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  1 | JOHN     | 123                              |  24 |    0 |
+|  4 | JOHN     | 123                              |  25 |    0 |
+|  2 | JOHN     | 123                              |  27 |    0 |
+|  8 | lINJIE   | 520                              |  28 |    0 |
++----+----------+----------------------------------+-----+------+
+9 rows in set (0.01 sec)
+```
+
+
+- limit 限制
+
+```
+mysql&gt; SELECT * FROM users4 ORDER BY age,id DESC LIMIT 2;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+| 11 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 | NULL |
+|  5 | JOHN     | 123                              |  18 |    0 |
++----+----------+----------------------------------+-----+------+
+2 rows in set (0.00 sec)
+
+mysql&gt; SELECT * FROM users4 ORDER BY age,id DESC LIMIT 4;
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+| 11 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  18 | NULL |
+|  5 | JOHN     | 123                              |  18 |    0 |
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
++----+----------+----------------------------------+-----+------+
+4 rows in set (0.01 sec)
+
+mysql&gt; SELECT * FROM users4 ORDER BY age,id DESC LIMIT 2,4;        # 从结果集中显示第二条开始，输出四条记录
++----+----------+----------------------------------+-----+------+
+| id | username | passwd                           | age | sex  |
++----+----------+----------------------------------+-----+------+
+| 10 | wutian   | 900150983cd24fb0d6963f7d28e17f72 |  21 |    0 |
+|  9 | ZHANG    | 7f6ffaa6bb0b408017b62254211691b5 |  24 |    0 |
+|  3 | MAX      | 223                              |  24 |    0 |
+|  1 | JOHN     | 123                              |  24 |    0 |
++----+----------+----------------------------------+-----+------+
+```
+
+```
+mysql&gt; SELECT * FROM users4 LIMIT 2;
++----+----------+--------+-----+------+
+| id | username | passwd | age | sex  |
++----+----------+--------+-----+------+
+|  1 | JOHN     | 123    |  24 |    0 |
+|  2 | JOHN     | 123    |  27 |    0 |
++----+----------+--------+-----+------+
+2 rows in set (0.00 sec)
+
+mysql&gt; SELECT * FROM users4 LIMIT 2,3;        # id为1的记录的是第0 条记录
++----+----------+--------+-----+------+
+| id | username | passwd | age | sex  |
++----+----------+--------+-----+------+
+|  3 | MAX      | 223    |  24 |    0 |
+|  4 | JOHN     | 123    |  25 |    0 |
+|  5 | JOHN     | 123    |  18 |    0 |
++----+----------+--------+-----+------+
+3 rows in set (0.00 sec)
+```
+
+```
+mysql&gt; CREATE TABLE test(
+    -&gt; id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; username VARCHAR(20)
+    -&gt; );
+Query OK, 0 rows affected (0.44 sec)
+
+mysql&gt;INSERT test(username) SELECT username FROM users4 WHERE age &gt;=22;
+Query OK, 6 rows affected (0.07 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+mysql&gt; SELECT * FROM test;
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
++----+----------+
+6 rows in set (0.00 sec)
+```
+
+```
+mysql&gt; SET NAMES UTF8;        # 设置在终端中显示的编码方式  不影响在数据库中的编码方式
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; SELECT * FROM test;
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
++----+----------+
+6 rows in set (0.00 sec)
+```
+
+**注意：聚合函数，只有一个返回值**
+
+```
+mysql&gt; SELECT AVG (goods_price) FROM tdb_goods;        # 平均值
++-------------------+
+| AVG (goods_price) |
++-------------------+
+|      5636.3636364 |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT ROUND(AVG(goods_price),2) FROM tdb_goods;        # 四舍五入
++---------------------------+
+| ROUND(AVG(goods_price),2) |
++---------------------------+
+|                   5636.36 |
++---------------------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT goods_id,goods_name,goods_price FROM tdb_goods WHERE goods_price &gt; =5636.36; 
++----------+-----------------------------------------+-------------+
+| goods_id | goods_name                              | goods_price |
++----------+-----------------------------------------+-------------+
+|        3 | G150TH 15.6英寸游戏本                   |    8499.000 |
+|        7 | SVP13226SCB 13.3英寸触控超极本          |    7999.000 |
+|       13 | iMac ME086CH/A 21.5英寸一体电脑         |    9188.000 |
+|       17 | Mac Pro MD878CH/A 专业级台式电脑        |   28888.000 |
+|       18 |  HMZ-T3W 头戴显示设备                   |    6999.000 |
+|       20 | X3250 M4机架式服务器 2583i14            |    6888.000 |
+|       21 |  HMZ-T3W 头戴显示设备                   |    6999.000 |
++----------+-----------------------------------------+-------------+
+7 rows in set (0.00 sec)
+
+mysql&gt; SELECT goods_id,goods_name,goods_price FROM tdb_goods WHERE goods_price &gt;
+=(SELECT ROUND(AVG(goods_price),2)FROM tdb_goods);            #  子查询
++----------+-----------------------------------------+-------------+
+| goods_id | goods_name                              | goods_price |
++----------+-----------------------------------------+-------------+
+|        3 | G150TH 15.6英寸游戏本                   |    8499.000 |
+|        7 | SVP13226SCB 13.3英寸触控超极本          |    7999.000 |
+|       13 | iMac ME086CH/A 21.5英寸一体电脑         |    9188.000 |
+|       17 | Mac Pro MD878CH/A 专业级台式电脑        |   28888.000 |
+|       18 |  HMZ-T3W 头戴显示设备                   |    6999.000 |
+|       20 | X3250 M4机架式服务器 2583i14            |    6888.000 |
+|       21 |  HMZ-T3W 头戴显示设备                   |    6999.000 |
++----------+-----------------------------------------+-------------+
+7 rows in set (0.04 sec)
+```
+
+- 使用外键处理重复的内容，防止表太大
+
+```
+mysql&gt; CREATE TABLE IF NOT EXISTS tdb_goods_cates(
+    -&gt; cate_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; cate_name CARCHAR(40) NOT NULL
+    -&gt; );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MySQL server version for the right syntax to use near 'CARCH
+AR(40) NOT NULL
+)' at line 3
+mysql&gt; CREATE TABLE IF NOT EXISTS tdb_goods_cates(
+    -&gt; cate_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; cate_name VARCHAR(40) NOT NULL
+    -&gt; );
+Query OK, 0 rows affected (0.58 sec)
+
+mysql&gt; SELECT goods_cate FROM tdb_goods GROUP BY goods_cate;
++---------------------+
+| goods_cate          |
++---------------------+
+| 台式机              |
+| 平板电脑            |
+| 服务器/工作站       |
+| 游戏本              |
+| 笔记本              |
+| 笔记本配件          |
+| 超级本              |
++---------------------+
+7 rows in set (0.00 sec)
+
+mysql&gt; INSERT tdb_goods_cates(cate_name)SELECT goods_cate FROM tdb_goods GROUP  BY goods_cate; 
+Query OK, 7 rows affected (0.13 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql&gt; SELECT * FROM tdb_goods_cate;
+ERROR 1146 (42S02): Table 'muke.tdb_goods_cate' doesn't exist
+mysql&gt; SELECT * FROM tdb_goods_cates;
++---------+---------------------+
+| cate_id | cate_name           |
++---------+---------------------+
+|       1 | 台式机              |
+|       2 | 平板电脑            |
+|       3 | 服务器/工作站       |
+|       4 | 游戏本              |
+|       5 | 笔记本              |
+|       6 | 笔记本配件          |
+|       7 | 超级本              |
++---------+---------------------+
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#参照表更新多表更新" id="参照表更新多表更新">参照表更新——多表更新</a></h4>
+<pre><code>- 表的连接
+
+```
+mysql&gt; UPDATE tdb_goods INNER JOIN tdb_goods_cates ON goods_cate = cate_name SET  goods_cate = cate_id;     # 内连接
+Query OK, 22 rows affected (0.07 sec)
+Rows matched: 22  Changed: 22  Warnings: 0
+
+mysql&gt; SELECT * FROM tdb_goods\G;
+*************************** 1. row ***************************
+   goods_id: 1
+ goods_name: R510VC 15.6英寸笔记本
+ goods_cate: 5
+ brand_name: 华硕
+goods_price: 3399.000
+    is_show: 1
+ is_saleoff: 0
+*************************** 2. row ***************************
+   goods_id: 2
+ goods_name: Y400N 14.0英寸笔记本电脑
+ goods_cate: 5
+ brand_name: 联想
+goods_price: 4899.000
+    is_show: 1
+ is_saleoff: 0
+*************************** 3. row ***************************
+   goods_id: 3
+ goods_name: G150TH 15.6英寸游戏本
+ goods_cate: 4
+ brand_name: 雷神
+goods_price: 8499.000
+    is_show: 1
+ is_saleoff: 0
+*************************** 4. row ***************************
+```
+
+- 多表更新一步到位:
+
+```
+mysql&gt; SELECT  brand_name FROM tdb_goods GROUP BY brand_name;
++------------+
+| brand_name |
++------------+
+| IBM        |
+| 华硕       |
+| 宏碁       |
+| 惠普       |
+| 戴尔       |
+| 索尼       |
+| 联想       |
+| 苹果       |
+| 雷神       |
++------------+
+
+mysql&gt; CREATE TABLE tdb_goods_brands(
+    -&gt; brand_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    -&gt; brand_name VARCHAR(40) NOT NULL
+    -&gt; )
+    -&gt; SELECT brand_name FROM tdb_goods GROUP BY brand_name;
+Query OK, 9 rows affected (0.68 sec)
+Records: 9  Duplicates: 0  Warnings: 0
+
+mysql&gt; SELECT * FROM tdb_goods_brands;
++----------+------------+
+| brand_id | brand_name |
++----------+------------+
+|        1 | IBM        |
+|        2 | 华硕       |
+|        3 | 宏碁       |
+|        4 | 惠普       |
+|        5 | 戴尔       |
+|        6 | 索尼       |
+|        7 | 联想       |
+|        8 | 苹果       |
+|        9 | 雷神       |
++----------+------------+
+9 rows in set (0.00 sec)
+```
+
+```
+mysql&gt; UPDATE tdb_goods INNER JOIN tdb_goods_brands ON brand_name = brand_name S
+ET brand_name = brand_id
+    -&gt; ;
+ERROR 1052 (23000): Column 'brand_name' in field list is ambiguous    # 同名歧义
+mysql&gt; UPDATE tdb_goods AS g INNER JOIN tdb_goods_brands AS b ON g.brand_name =b .brand_name SET g.brand_name = b.brand_id;             #  起别名 
+Query OK, 22 rows affected (0.07 sec)
+Rows matched: 22  Changed: 22  Warnings: 0
+
+mysql&gt;
+
+其中表结构没有得到修改，尽量的修改   事实外键的使用，而尽量不使用物理外键
+mysql&gt; ALTER TABLE tdb_goods
+    -&gt; CHANGE goods_cate cate_id SMALLINT UNSIGNED NOT NULL,
+    -&gt; CHANGE brand_name brands_id SMALLINT  UNSIGNED NOT NULL;
+Query OK, 22 rows affected (0.96 sec)
+Records: 22  Duplicates: 0  Warnings: 0
+
+mysql&gt; SELECT * FROM tdb_goods\G;
+*************************** 1. row ***************************
+   goods_id: 1
+ goods_name: R510VC 15.6英寸笔记本
+    cate_id: 5
+  brands_id: 2
+goods_price: 3399.000
+    is_show: 1
+ is_saleoff: 0
+*************************** 2. row ***************************
+   goods_id: 2
+ goods_name: Y400N 14.0英寸笔记本电脑
+    cate_id: 5
+  brands_id: 7
+goods_price: 4899.000
+    is_show: 1
+ is_saleoff: 0
+*************************** 3. row ***************************
+
+mysql&gt; SELECT goods_id ,goods_name,cate_name,brand_name,goods_price FROM tdb_goo
+ds AS g
+    -&gt; INNER JOIN tdb_goods_cates AS c ON g.cate_id = c.cate_id
+    -&gt; INNER JOIN tdb_goods_brands AS b ON g.brands_id= b.brand_id \G;
+*************************** 1. row ***************************
+   goods_id: 1
+ goods_name: R510VC 15.6英寸笔记本
+  cate_name: 笔记本
+ brand_name: 华硕
+goods_price: 3399.000
+*************************** 2. row ***************************
+   goods_id: 2
+ goods_name: Y400N 14.0英寸笔记本电脑
+  cate_name: 笔记本
+ brand_name: 联想
+goods_price: 4899.000
+*************************** 3. row ***************************
+   goods_id: 3
+ goods_name: G150TH 15.6英寸游戏本
+  cate_name: 游戏本
+ brand_name: 雷神
+goods_price: 8499.000
+*************************** 4. row ***************************
+   goods_id: 4
+ goods_name: X550CC 15.6英寸笔记本
+  cate_name: 笔记本
+ brand_name: 华硕
+goods_price: 2799.000
+*************************** 5. row ***************************
+   goods_id: 5
+ goods_name: X240(20ALA0EYCD) 12.5英寸超极本
+  cate_name: 超级本
+ brand_name: 联想
+goods_price: 4999.000
+*************************** 6. row ***************************
+```
+
+- 无限分类的数据表设计 （自连接）
+
+```
+   CREATE TABLE tdb_goods_types(
+     type_id   SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+     type_name VARCHAR(20) NOT NULL,
+     parent_id SMALLINT UNSIGNED NOT NULL DEFAULT 0
+  );
+
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('家用电器',DEFAULT);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电脑、办公',DEFAULT);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('大家电',1);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('生活电器',1);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('平板电视',3);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('空调',3);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电风扇',4);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('饮水机',4);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电脑整机',2);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('电脑配件',2);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('笔记本',9);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('超级本',9);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('游戏本',9);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('CPU',10);
+  INSERT tdb_goods_types(type_name,parent_id) VALUES('主机',10);
+
+mysql&gt; SELECT * FROM   tdb_goods_types;
++---------+-----------------+-----------+
+| type_id | type_name       | parent_id |
++---------+-----------------+-----------+
+|       1 | 家用电器        |         0 |
+|       2 | 电脑、办公      |         0 |
+|       3 | 大家电          |         1 |
+|       4 | 生活电器        |         1 |
+|       5 | 平板电视        |         3 |
+|       6 | 空调            |         3 |
+|       7 | 电风扇          |         4 |
+|       8 | 饮水机          |         4 |
+|       9 | 电脑整机        |         2 |
+|      10 | 电脑配件        |         2 |
+|      11 | 笔记本          |         9 |
+|      12 | 超级本          |         9 |
+|      13 | 游戏本          |         9 |
+|      14 | CPU             |        10 |
+|      15 | 主机            |        10 |
++---------+-----------------+-----------+
+15 rows in set (0.00 sec)
+
+mysql&gt;
+
+mysql&gt; SELECT s.type_id,s.type_name,p.type_name FROM tdb_goods_types AS s LEFT JOIN tdb_goods_types AS p ON s.parent_id = p.type_id; 
++---------+-----------------+-----------------+
+| type_id | type_name       | type_name       |
++---------+-----------------+-----------------+
+|       1 | 家用电器        | NULL            |
+|       2 | 电脑、办公      | NULL            |
+|       3 | 大家电          | 家用电器        |
+|       4 | 生活电器        | 家用电器        |
+|       5 | 平板电视        | 大家电          |
+|       6 | 空调            | 大家电          |
+|       7 | 电风扇          | 生活电器        |
+|       8 | 饮水机          | 生活电器        |
+|       9 | 电脑整机        | 电脑、办公      |
+|      10 | 电脑配件        | 电脑、办公      |
+|      11 | 笔记本          | 电脑整机        |
+|      12 | 超级本          | 电脑整机        |
+|      13 | 游戏本          | 电脑整机        |
+|      14 | CPU             | 电脑配件        |
+|      15 | 主机            | 电脑配件        |
++---------+-----------------+-----------------+
+15 rows in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT p.type_id,p.type_name,s.type_name FROM tdb_goods_types p LEFT JOIN
+ tdb_goods_types s ON s.parent_id = p.type_id;        # 缺省AS 
++---------+-----------------+--------------+
+| type_id | type_name       | type_name    |
++---------+-----------------+--------------+
+|       1 | 家用电器        | 大家电       |
+|       1 | 家用电器        | 生活电器     |
+|       3 | 大家电          | 平板电视     |
+|       3 | 大家电          | 空调         |
+|       4 | 生活电器        | 电风扇       |
+|       4 | 生活电器        | 饮水机       |
+|       2 | 电脑、办公      | 电脑整机     |
+|       2 | 电脑、办公      | 电脑配件     |
+|       9 | 电脑整机        | 笔记本       |
+|       9 | 电脑整机        | 超级本       |
+|       9 | 电脑整机        | 游戏本       |
+|      10 | 电脑配件        | CPU          |
+|      10 | 电脑配件        | 主机         |
+|       5 | 平板电视        | NULL         |
+|       6 | 空调            | NULL         |
+|       7 | 电风扇          | NULL         |
+|       8 | 饮水机          | NULL         |
+|      11 | 笔记本          | NULL         |
+|      12 | 超级本          | NULL         |
+|      13 | 游戏本          | NULL         |
+|      14 | CPU             | NULL         |
+|      15 | 主机            | NULL         |
++---------+-----------------+--------------+
+
+```
+
+mysql&gt; SELECT p.type_id,p.type_name,s.type_name FROM tdb_goods_types p LEFT JOIN
+ tdb_goods_types s ON s.parent_id = p.type_id GROUP BY p.type_id;
++---------+-----------------+--------------+
+| type_id | type_name       | type_name    |
++---------+-----------------+--------------+
+|       1 | 家用电器        | 大家电       |
+|       2 | 电脑、办公      | 电脑整机     |
+|       3 | 大家电          | 平板电视     |
+|       4 | 生活电器        | 电风扇       |
+|       5 | 平板电视        | NULL         |
+|       6 | 空调            | NULL         |
+|       7 | 电风扇          | NULL         |
+|       8 | 饮水机          | NULL         |
+|       9 | 电脑整机        | 笔记本       |
+|      10 | 电脑配件        | CPU          |
+|      11 | 笔记本          | NULL         |
+|      12 | 超级本          | NULL         |
+|      13 | 游戏本          | NULL         |
+|      14 | CPU             | NULL         |
+|      15 | 主机            | NULL         |
++---------+-----------------+--------------+
+15 rows in set (0.01 sec)
+
+mysql&gt;
+mysql&gt; SELECT p.type_id,p.type_name,count(s.type_name) child_count FROM tdb_good s_types p LEFT JOIN tdb_goods_types s ON s.parent_id = p.type_id GROUP BY p.type _id; 
++---------+-----------------+-------------+
+| type_id | type_name       | child_count |
++---------+-----------------+-------------+
+|       1 | 家用电器        |           2 |
+|       2 | 电脑、办公      |           2 |
+|       3 | 大家电          |           2 |
+|       4 | 生活电器        |           2 |
+|       5 | 平板电视        |           0 |
+|       6 | 空调            |           0 |
+|       7 | 电风扇          |           0 |
+|       8 | 饮水机          |           0 |
+|       9 | 电脑整机        |           3 |
+|      10 | 电脑配件        |           2 |
+|      11 | 笔记本          |           0 |
+|      12 | 超级本          |           0 |
+|      13 | 游戏本          |           0 |
+|      14 | CPU             |           0 |
+|      15 | 主机            |           0 |
++---------+-----------------+-------------+
+15 rows in set (0.00 sec)
+```
+
+
+
+- 多表删除
+
+  删除重复记录，保留ID号最小的记录（自身连接）
+
+```
+mysql&gt; DELETE t1 FROM tdb_goods AS t1 LEFT JOIN (SELECT goods_id,goods_name FROM
+tdb_goods GROUP BY goods_name HAVING count(goods_name)&gt;=2) AS t2 ON t1.goods_nam
+e = t2.goods_name WHERE t1.goods_id &gt;t2.goods_id;
+Query OK, 2 rows affected (0.12 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#mysql函数" id="mysql函数">MySQL函数</a></h4>
+<pre><code>- 字符函数
+
+```
+mysql&gt; SELECT CONCAT('LINJIE','MYSQL');
++--------------------------+
+| CONCAT('LINJIE','MYSQL') |
++--------------------------+
+| LINJIEMYSQL              |
++--------------------------+
+1 row in set (0.01 sec)
+```
+
+```
+mysql&gt; SELECT CONCAT('LINJIE','-','MYSQL');
++------------------------------+
+| CONCAT('LINJIE','-','MYSQL') |
++------------------------------+
+| LINJIE-MYSQL                 |
++------------------------------+
+```
+
+```
+mysql&gt; select * from test;
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
++----+----------+
+```
+
+```
+mysql&gt; SELECT CONCAT(id,username) AS FULLNAME FROM TEST;
++----------+
+| FULLNAME |
++----------+
+| 1JOHN    |
+| 2JOHN    |
+| 3MAX     |
+| 4JOHN    |
+| 5lINJIE  |
+| 6ZHANG   |
++----------+
+```
+
+```
+mysql&gt; SELECT CONCAT(id,'-',username) AS FULLNAME FROM TEST;
++----------+
+| FULLNAME |
++----------+
+| 1-JOHN   |
+| 2-JOHN   |
+| 3-MAX    |
+| 4-JOHN   |
+| 5-lINJIE |
+| 6-ZHANG  |
++----------+
+```
+
+```
+mysql&gt; SELECT CONCAT_WS('-','LINJIE','GOOD','FUNCTIONS');
++--------------------------------------------+
+| CONCAT_WS('-','LINJIE','GOOD','FUNCTIONS') |
++--------------------------------------------+
+| LINJIE-GOOD-FUNCTIONS                      |
++--------------------------------------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT FORMAT(123456.77,2);
++---------------------+
+| FORMAT(123456.77,2) |
++---------------------+
+| 123,456.77          |
++---------------------+
+1 row in set (0.01 sec)
+```
+
+```
+mysql&gt; SELECT FORMAT(123456.778,2);
++----------------------+
+| FORMAT(123456.778,2) |
++----------------------+
+| 123,456.78           |
++----------------------+
+```
+
+```
+mysql&gt;
+mysql&gt; SELECT LOWER('MYSQl');
++----------------+
+| LOWER('MYSQl') |
++----------------+
+| mysql          |
++----------------+
+```
+
+```
+mysql&gt; SELECT UPPER('Mysql');
++----------------+
+| UPPER('Mysql') |
++----------------+
+| MYSQL          |
++----------------+
+```
+
+```
+mysql&gt; SELECT LEFT ('mYSQL',2);
++------------------+
+| LEFT ('mYSQL',2) |
++------------------+
+| mY               |                    # 取出前面指定个数的字符
++------------------+
+```
+
+```    
+mysql&gt; SELECT LOWER(LEFT('MYSQL',2));
++------------------------+
+| LOWER(LEFT('MYSQL',2)) |
++------------------------+
+| my                     |
++------------------------+
+```
+
+```
+mysql&gt; SELECT LOWER(RIGHT('MYSQL',2));
++-------------------------+
+| LOWER(RIGHT('MYSQL',2)) |
++-------------------------+
+| ql                      |
++-------------------------+
+```
+
+```
+mysql&gt; SELECT LENGTH('MYSQL L  ');        # 求字符串长度
++---------------------+
+| LENGTH('MYSQL L  ') |
++---------------------+
+|                   9 |
++---------------------+
+```
+
+```
+mysql&gt; SELECT LENGTH('MYSQL L      ');
++-------------------------+
+| LENGTH('MYSQL L      ') |
++-------------------------+
+|                      13 |
++-------------------------+
+```
+
+```
+mysql&gt; SELECT LTRIM('  MYSQL LINJIE   ');        # 删除前导空格
++----------------------------+
+| LTRIM('  MYSQL LINJIE   ') |
++----------------------------+
+| MYSQL LINJIE               |
++----------------------------+
+```
+
+
+```
+mysql&gt; SELECT LENGTH( LTRIM('  MYSQL LINJIE   '));      
++-------------------------------------+
+| LENGTH( LTRIM('  MYSQL LINJIE   ')) |
++-------------------------------------+
+|                                  15 |
++-------------------------------------+
+```
+
+```
+mysql&gt; SELECT RTRIM('  MYSQL LINJIE   ');
++----------------------------+
+| RTRIM('  MYSQL LINJIE   ') |
++----------------------------+
+|   MYSQL LINJIE             |
++----------------------------+
+```
+
+```
+mysql&gt; SELECT LENGTH( RTRIM('  MYSQL LINJIE   '));
++-------------------------------------+
+| LENGTH( RTRIM('  MYSQL LINJIE   ')) |
++-------------------------------------+
+|                                  14 |
++-------------------------------------+
+```
+
+```
+mysql&gt; SELECT LENGTH(TRIM('  MYSQL LINJIE   '));
++-----------------------------------+
+| LENGTH(TRIM('  MYSQL LINJIE   ')) |
++-----------------------------------+
+|                                12 |
++-----------------------------------+
+```
+
+```
+mysql&gt; SELECT TRIM(LEADING '?' FROM '???MYSQL???');        # 删除前导的？
++--------------------------------------+
+| TRIM(LEADING '?' FROM '???MYSQL???') |
++--------------------------------------+
+| MYSQL???                             |
++--------------------------------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT TRIM(TRAILING '?' FROM '???MYSQL???');        # 删除后导字符？
++---------------------------------------+
+| TRIM(TRAILING '?' FROM '???MYSQL???') |
++---------------------------------------+
+| ???MYSQL                              |
++---------------------------------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT TRIM(BOTH '?' FROM '???MYSQL???');        # 删除字符串中的？字符
++-----------------------------------+
+| TRIM(BOTH '?' FROM '???MYSQL???') |
++-----------------------------------+
+| MYSQL                             |
++-----------------------------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT REPLACE ('???MYS??QL??','?','');
++---------------------------------+
+| REPLACE ('???MYS??QL??','?','') |
++---------------------------------+
+| MYSQL                           |
++---------------------------------+
+```
+
+```
+mysql&gt; SELECT REPLACE ('???MYS??QL??','?','!');
++----------------------------------+
+| REPLACE ('???MYS??QL??','?','!') |
++----------------------------------+
+| !!!MYS!!QL!!                     |
++----------------------------------+
+```
+
+```
+mysql&gt; SELECT SUBSTRING('MYSQL',1,2);    # 截取字符
++------------------------+
+| SUBSTRING('MYSQL',1,2) |
++------------------------+
+| MY                     |
++------------------------+
+```
+
+```
+mysql&gt; SELECT SUBSTRING('MYSQL',3);        # 截取字符从第三位开始到家结束
++----------------------+
+| SUBSTRING('MYSQL',3) |
++----------------------+
+| SQL                  |
++----------------------+
+```
+
+```
+mysql&gt; SELECT SUBSTRING('LINJIE',3);
++-----------------------+
+| SUBSTRING('LINJIE',3) |
++-----------------------+
+| NJIE                  |
++-----------------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT SUBSTRING('LINJIE',-3);    # 倒数三位
++------------------------+
+| SUBSTRING('LINJIE',-3) |
++------------------------+
+| JIE                    |
++------------------------+
+```
+
+```
+mysql&gt; SELECT 'MYSQL' LINKE 'M%';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MySQL server version for the right syntax to use near ''M%''
+ at line 1
+mysql&gt; SELECT 'MYSQL' LIKE 'M%';
++-------------------+
+| 'MYSQL' LIKE 'M%' |
++-------------------+
+|                 1 |
++-------------------+
+```
+
+```
+mysql&gt; SELECT  * FROM test;
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
++----+----------+
+```
+
+```
+mysql&gt; INSERT INTO test VALUES(NULL,'TOM%');
+Query OK, 1 row affected (0.10 sec)
+
+mysql&gt; SELECT  * FROM test;
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
+|  8 | TOM%     |
++----+----------+
+```
+
+```
+mysql&gt; SELECT * FROM test WHERE username LIKE '%%%';
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
+|  8 | TOM%     |
++----+----------+
+```
+
+```
+mysql&gt; SELECT * FROM test WHERE username LIKE '%1%%' ESCAPE 1;        # % 是通配符 忽略数字1 后面的%当做符号%来使用 而不是通配符
++----+----------+
+| id | username |
++----+----------+
+|  8 | TOM%     |
++----+----------+
+1 row in set (0.00 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#数值运算" id="数值运算">数值运算</a></h4>
+<pre><code>```
+mysql&gt; SELECT 2+7;
++-----+
+| 2+7 |
++-----+
+|   9 |
++-----+
+1 row in set (0.00 sec)
+    
+mysql&gt; SELECT CEIL(3.01);    #向上取整
++------------+
+| CEIL(3.01) |
++------------+
+|          4 |
++------------+
+1 row in set (0.00 sec)
+    
+mysql&gt; SELECT FLOOR(3.01);        # 向下取整
++-------------+
+| FLOOR(3.01) |
++-------------+
+|           3 |
++-------------+
+1 row in set (0.00 sec)
+
+```
+
+```
+mysql&gt; SELECT 3 DIV 4;
++---------+
+| 3 DIV 4 |
++---------+
+|       0 |
++---------+
+1 row in set (0.01 sec)
+
+mysql&gt; SELECT 5 DIV 4;
++---------+
+| 5 DIV 4 |
++---------+
+|       1 |
++---------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT 5 MOD 4;
++---------+
+| 5 MOD 4 |
++---------+
+|       1 |
++---------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT 5 MOD 2.3;
++-----------+
+| 5 MOD 2.3 |
++-----------+
+|       0.4 |
++-----------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT POWER(3,3);
++------------+
+| POWER(3,3) |
++------------+
+|         27 |
++------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT ROUND(3.6545,3);
++-----------------+
+| ROUND(3.6545,3) |
++-----------------+
+|           3.655 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT TRUNCATE(3.6545,3);
++--------------------+
+| TRUNCATE(3.6545,3) |
++--------------------+
+|              3.654 |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql&gt;
+
+mysql&gt; SELECT 15 BETWEEN 1 AND 22;
++---------------------+
+| 15 BETWEEN 1 AND 22 |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.01 sec)
+
+mysql&gt; SELECT 35 BETWEEN 1 AND 22;
++---------------------+
+| 35 BETWEEN 1 AND 22 |
++---------------------+
+|                   0 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT 35 NOT BETWEEN 1 AND 22;
++-------------------------+
+| 35 NOT BETWEEN 1 AND 22 |
++-------------------------+
+|                       1 |
++-------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT 35 IN(15,25,35);
++-----------------+
+| 35 IN(15,25,35) |
++-----------------+
+|               1 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT 30 IN(15,25,35);
++-----------------+
+| 30 IN(15,25,35) |
++-----------------+
+|               0 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT NULL IS NULL;
++--------------+
+| NULL IS NULL |
++--------------+
+|            1 |
++--------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT NULL IS NOT NULL;
++------------------+
+| NULL IS NOT NULL |
++------------------+
+|                0 |
++------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT '' IS NOT NULL;
++----------------+
+| '' IS NOT NULL |
++----------------+
+|              1 |
++----------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT '' IS NULL;
++------------+
+| '' IS NULL |
++------------+
+|          0 |
++------------+
+1 row in set (0.00 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#日期时间函数" id="日期时间函数">日期时间函数</a></h4>
+<pre><code>```
+mysql&gt; SELECT NOW();
++---------------------+
+| NOW()               |
++---------------------+
+| 2015-04-06 22:20:33 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT CURDATE();
++------------+
+| CURDATE()  |
++------------+
+| 2015-04-06 |
++------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT CURTIME();
++-----------+
+| CURTIME() |
++-----------+
+| 22:20:53  |
++-----------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATE_ADD('2015-4-6',INTERVAL 365 DAY);
++---------------------------------------+
+| DATE_ADD('2015-4-6',INTERVAL 365 DAY) |
++---------------------------------------+
+| 2016-04-05                            |
++---------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATE_ADD('2015-4-6',INTERVAL -365 DAY);
++----------------------------------------+
+| DATE_ADD('2015-4-6',INTERVAL -365 DAY) |
++----------------------------------------+
+| 2014-04-06                             |
++----------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATE_ADD('2015-4-6',INTERVAL 1 YEAR);
++--------------------------------------+
+| DATE_ADD('2015-4-6',INTERVAL 1 YEAR) |
++--------------------------------------+
+| 2016-04-06                           |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATE_ADD('2015-4-6',INTERVAL 1 WEEK);        # 添加一个星期
++--------------------------------------+
+| DATE_ADD('2015-4-6',INTERVAL 1 WEEK) |
++--------------------------------------+
+| 2015-04-13                           |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATE_ADD('2015-4-6',INTERVAL 1 WEEK);
++--------------------------------------+
+| DATE_ADD('2015-4-6',INTERVAL 1 WEEK) |
++--------------------------------------+
+| 2015-04-13                           |
++--------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATEDIFF('2014-1-1','2015-2-2');
++---------------------------------+
+| DATEDIFF('2014-1-1','2015-2-2') |
++---------------------------------+
+|                            -397 |
++---------------------------------+
+1 row in set (0.00 sec)
+
+
+mysql&gt; SELECT DATE_FORMAT('2015-4-6','%M/%D/%Y');
++------------------------------------+
+| DATE_FORMAT('2015-4-6','%M/%D/%Y') |
++------------------------------------+
+| April/6th/2015                     |
++------------------------------------+
+1 row in set (0.01 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#信息函数" id="信息函数">信息函数</a></h4>
+<pre><code>```
+mysql&gt; SELECT CONNECTION_ID();
++-----------------+
+| CONNECTION_ID() |
++-----------------+
+|               3 |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT DATABASE();
++------------+
+| DATABASE() |
++------------+
+| muke       |
++------------+
+1 row in set (0.01 sec)
+
+mysql&gt; SELECT USER();
++----------------+
+| USER()         |
++----------------+
+| root@localhost |
++----------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT VERSION();
++------------+
+| VERSION()  |
++------------+
+| 5.6.21-log |
++------------+
+1 row in set (0.00 sec)
+```
+
+```
+mysql&gt; SELECT MD5('123');
++----------------------------------+
+| MD5('123')                       |
++----------------------------------+
+| 202cb962ac59075b964b07152d234b70 |
++----------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SELECT PASSWORD('123');
++-------------------------------------------+
+| PASSWORD('123')                           |
++-------------------------------------------+
+| *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
++-------------------------------------------+
+1 row in set (0.00 sec)
+
+mysql&gt; SET PASSWORD = PASSWORD('linjie520');        # 修改当前用户的密码
+Query OK, 0 rows affected (0.16 sec)
+```
+</code></pre>
+<hr />
+<h4><a class="header" href="#mysql自定义函数" id="mysql自定义函数">MySQL自定义函数</a></h4>
+<pre><code>mysql&gt; CREATE FUNCTION f1() RETURNS VARCHAR(30)        # 定义函数
+    -&gt; RETURN DATE_FORMAT(NOW(),'%Y年%m月%d日 %h点：%i分：%s秒')
+    -&gt; ;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; SELECT f1();        # 调用函数
++---------------------------------+
+| f1()                            |
++---------------------------------+
+| 2015年04月06日 10点：57分：10秒 |
++---------------------------------+
+1 row in set (0.04 sec)
+</code></pre>
+<pre><code>mysql&gt; CREATE FUNCTION f2(num1 SMALLINT UNSIGNED,num2 SMALLINT UNSIGNED)
+    -&gt; RETURNS FLOAT(10,2) UNSIGNED
+    -&gt; RETURN (num1+num2)/2;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; SELECT f2(10,69);
++-----------+
+| f2(10,69) |
++-----------+
+|     39.50 |
++-----------+
+1 row in set (0.00 sec)
+</code></pre>
+<pre><code>mysql&gt; DELIMITER //        # 定义语句结束符 避免在写函数的时候的分号冲突
+mysql&gt;
+mysql&gt; CREATE FUNCTION adduser(username VARCHAR(20))
+    -&gt; RETURNS INT UNSIGNED
+    -&gt; BEGIN
+    -&gt; INSERT test (username) VALUES(username);
+    -&gt; RETURN LAST_INSERT_ID();
+    -&gt; END        # 和 BEGIN 构成聚合体
+    -&gt; //
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; SELECT adduser('bubu');
+    -&gt; //
++-----------------+
+| adduser('bubu') |
++-----------------+
+|               9 |
++-----------------+
+1 row in set (0.06 sec)
+</code></pre>
+<pre><code>mysql&gt; select * from test//
++----+----------+
+| id | username |
++----+----------+
+|  1 | JOHN     |
+|  2 | JOHN     |
+|  3 | MAX      |
+|  4 | JOHN     |
+|  5 | lINJIE   |
+|  6 | ZHANG    |
+|  8 | TOM%     |
+|  9 | bubu     |
++----+----------+
+8 rows in set (0.00 sec)
+
+mysql&gt; DROP FUNCTION adduser; //    # 删除自定义函数
+</code></pre>
+<hr />
+<h4><a class="header" href="#存储过程" id="存储过程">存储过程</a></h4>
+<ul>
+<li>
+<p>默认当前用户创建存储过程（过程体）</p>
+</li>
+<li>
+<p>增删改查，多表连接操作的存储过程！！！</p>
+</li>
+</ul>
+<pre><code>root@localhost muke&gt;CREATE PROCEDURE sp1() SELECT VERSION();
+Query OK, 0 rows affected (0.10 sec)
+
+root@localhost muke&gt;CALL sp1;
++------------+
+| VERSION()  |
++------------+
+| 5.6.21-log |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+</code></pre>
+<pre><code>root@localhost muke&gt;CALL sp1();
++------------+
+| VERSION()  |
++------------+
+| 5.6.21-log |
++------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+root@localhost muke&gt;DELIMITER //
+
+root@localhost muke&gt;CREATE PROCEDURE removeGoodsId(IN id INT UNSIGNED)
+    -&gt; BEGIN
+    -&gt; DELETE FROM tdb_goods WHERE id = id;        # 这里的参数和表字段同名 导致删除的时候所有的表内容都删除了
+    -&gt; END
+    -&gt; //
+Query OK, 0 rows affected (0.00 sec)                              注意： 这里的IN id要修改为其他形参，再修改 WHERE id = 形参
+</code></pre>
+<pre><code>root@localhost muke&gt;DELIMITER ;
+root@localhost muke&gt;CALL removeGoodsId(3);
+Query OK, 20 rows affected (0.07 sec)
+
+root@localhost muke&gt;SELECT * FROM tdb_goods;
+Empty set (0.00 sec)
+
+</code></pre>
+<ul>
+<li>存储过程书写错误的时候要删除后重建！！！</li>
+</ul>
+<pre><code>root@localhost muke&gt;DROP PROCEDURE removeGoodsId;
+Query OK, 0 rows affected (0.00 sec)    
+root@localhost muke&gt;DELIMITER //
+root@localhost muke&gt;CREATE PROCEDURE removeUserAndReturnUserNums(IN P_ID INT UNSIGNED,OUT userNums INT UNSIGNED)
+    -&gt; BEGIN
+    -&gt; DELETE FROM users WHERE id = p_id;
+    -&gt; SELECT count(id) FROM users INTO userNums;        #  局部变量声明
+    -&gt; END
+    -&gt; //
+Query OK, 0 rows affected (0.00 sec)
+
+root@localhost muke&gt;DELIMITER ;
+root@localhost muke&gt;CALL removeUserAndReturnUserNums(4,@nums);
+Query OK, 1 row affected (0.06 sec)
+
+root@localhost muke&gt;SELECT * FROM users;
++----+----------+------+
+| id | username | pid  |
++----+----------+------+
+|  3 | LINJIE   | NULL |
+|  5 | lin      | NULL |
+|  6 | uunh     | NULL |
+|  7 | MAX      | NULL |
++----+----------+------+
+4 rows in set (0.00 sec)
+
+root@localhost muke&gt;SELECT @nums ;        #  
++-------+
+| @nums |
++-------+
+|     4 |
++-------+
+1 row in set (0.00 sec)
+</code></pre>
+<pre><code>root@localhost muke&gt;SELECT ROW_COUNT();        # 得到插入、删除、更新、被影响的行数
++-------------+
+| ROW_COUNT() |
++-------------+
+|          -1 |
++-------------+
+1 row in set (0.00 sec)
+</code></pre>
+<p><strong>存储过程会很复杂用来对表进行操作，函数的针对性更强些而很少用函数对表操作。</strong></p>
+<hr />
+<h4><a class="header" href="#mysql锁策略" id="mysql锁策略">MySQL锁策略：</a></h4>
+<pre><code>```
+mysql&gt; CREATE TABLE tb5(
+    -&gt; s1 VARCHAR(10)
+    -&gt; ) ENGINE = MyISAM;	# setting enging
+Query OK, 0 rows affected (0.10 sec)
+
+mysql&gt; SHOW CREATE TABLE tb5;
+| tb5   | CREATE TABLE `tb5` (
+  `s1` varchar(10) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 |
+
+mysql&gt; ALTER TABLE tb5 ENGINE =InnoDB;
+Query OK, 0 rows affected (0.52 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql&gt; SHOW CREATE TABLE tb5;
+| tb5   | CREATE TABLE `tb5` (
+  `s1` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 |
+
+str_to_date(&quot;2015-05-06&quot;, &quot;%y-%m-%d&quot;)  日期处理
+```
+
+```
+UPDATE supply_chain_stats_daily SET return_num=0
+WHERE   created BETWEEN '2015-09-17' AND '2015-09-19';
+
+Error Code: 1175. You are using safe update mode and you tried to
+ update a table without a WHERE that uses a KEY column To disable safe mode, 
+ toggle the option in Preferences -&gt; SQL Editor and reconnect.
+将 SET SQL_SAFE_UPDATES = 1;  # 当前会话有效
+设置为： SET SQL_SAFE_UPDATES = 0;
+再使用更新语句。
+```
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../db/mysql.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../db/mysql-performance.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../db/mysql.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../db/mysql-performance.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

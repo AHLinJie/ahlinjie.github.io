@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>tornado - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html" class="active"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: tornado基础
+category: webframework
+tag: tornado
+date: 2017-2-14</h2>
+<p><strong>摘要：</strong>
+tornado是一个异步非阻塞的web开发框架，这里添加一些基础的代码，学习ing.
+不断更新吧。模板和django的还是很相似的。
+<a href="https://github.com/tornadoweb/tornado">github</a>
+<a href="docs.pythontab.com/tornado/introduction-to-tornado">中文基础教程</a></p>
+<h5><a class="header" href="#web-requesthandler" id="web-requesthandler">web requesthandler</a></h5>
+<ol>
+<li>hello.py</li>
+</ol>
+<pre><code>#coding=utf-8
+import textwrap
+import tornado.options
+import tornado.ioloop
+import tornado.web
+
+from tornado.options import define, options
+
+
+define(&quot;port&quot;, default=8888, help='run on the given port', type=int)
+
+
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write(&quot;Hello, world&quot;)
+
+
+class StoryHandler(tornado.web.RequestHandler):
+    def get(self, story_id):
+        self.write(&quot;You request the story id is: %s&quot; % story_id)
+        print self.get_argument('user_name', 'nobody')  # ?user_name=abcdef
+
+
+class ReverseHandler(tornado.web.RequestHandler):
+    def get(self, input_str):
+        self.write(&quot;reserves result is: %s&quot; % input_str[::-1])
+
+
+class WrapHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write('this is get method')
+
+    # http post 方法
+    def post(self):
+        text = self.get_argument('text')
+        print 'text is:', text
+        width = self.get_argument('width', 40)
+        print 'width is:', width
+        self.write(textwrap.fill(text, int(width)))
+
+
+class FrobHandler(tornado.web.RequestHandler):
+    def get(self, frob_id):
+        # frob = retrive_from_db(frob_id)
+        # self.write(frob.serialize()) 
+        self.write('after')
+        
+    # http head 方法
+    def head(self, frob_id):
+        if frob_id:
+            self.set_status(200)  # 使用set_status 设置请求头
+        else:
+            self.set_status(404)
+
+
+class RewriteErrorHandler(tornado.web.RequestHandler):
+    def get(self):
+        self.write('get example')
+
+    # 重写错误相应方法
+    def write_error(self, status_code, **kwargs):  # 注意这里的参数
+        self.write('this is rewrite the write_error func')
+
+
+def make_app():
+    return tornado.web.Application([
+        (r&quot;/&quot;, MainHandler),
+        (r&quot;/story/([0-9]+)&quot;, StoryHandler),
+        (r&quot;/wrap&quot;, WrapHandler),
+        (r&quot;/reverse/(\w+)&quot;, ReverseHandler),
+        (r&quot;/frob/([0-9]+)&quot;, FrobHandler),
+        (r&quot;/werror&quot;, RewriteErrorHandler),
+    ])
+
+if __name__ == &quot;__main__&quot;:
+    tornado.options.parse_command_line()
+    app = make_app()
+    app.listen(options.port)
+    tornado.ioloop.IOLoop.instance().start()
+</code></pre>
+<h5><a class="header" href="#templates" id="templates">templates</a></h5>
+<ol>
+<li>后台代码</li>
+</ol>
+<pre><code>#coding=utf-8
+import os.path
+
+import tornado.httpserver
+import tornado.ioloop
+import tornado.options
+import tornado.web
+
+from tornado.options import define, options
+
+
+define('port', default=8888, help='run on the give port', type=int)
+
+
+class IndexHandler(tornado.web.RequestHandler):
+
+    def get(self):
+        self.render('index.html')
+
+
+class PoemHandler(tornado.web.RequestHandler):
+
+    def post(self):
+        noun1 = self.get_argument('noun1')
+        noun2 = self.get_argument('noun2')
+        noun3 = self.get_argument('noun3')
+        verb = self.get_argument('verb')
+        self.render('poem.html', 
+                    roads=noun1, 
+                    wood=noun2, 
+                    made=verb,
+                    difference=noun3)
+
+# 模板中使用模块
+class HelloModule(tornado.web.UIModule):
+
+    def render(self):
+        return '&lt;h2&gt;this is a uimodule render&lt;/h2&gt;'
+    
+
+def make_app():
+    return tornado.web.Application(
+            [
+                (r'/', IndexHandler),
+                (r'/poem', PoemHandler),
+            ],
+            template_path=os.path.join(os.path.dirname(__file__), 'templates'),
+            static_path=os.path.join(os.path.dirname(__file__), 'static'),
+            ui_modules = {'hello': HelloModule}, ## 模板中使用module
+        )
+
+
+if __name__ == '__main__':
+    tornado.options.parse_command_line()
+    app = make_app()
+    app.listen(options.port)
+    tornado.ioloop.IOLoop.instance().start()
+</code></pre>
+<ol start="2">
+<li>templates/poem.html</li>
+</ol>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;&lt;title&gt;Poem Maker Pro&lt;/title&gt;&lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Your poem&lt;/h1&gt;
+	&lt;p&gt;
+	Two {{roads}} diverged in a {{wood}}, and I—&lt;br&gt;
+	I took the one less travelled by,&lt;br&gt;
+	And that has {{made}} all the {{difference}}.
+	&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="4">
+<li>template/index.html</li>
+</ol>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Poem Maker Pro&lt;/title&gt;
+        &lt;script type=&quot;text/javascript&quot; src=&quot;{{static_url(&quot;console.js&quot;) }}&quot;&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Enter terms below.&lt;/h1&gt;
+        &lt;form method=&quot;post&quot; action=&quot;/poem&quot;&gt;
+        &lt;p&gt;Plural noun&lt;br&gt;&lt;input type=&quot;text&quot; name=&quot;noun1&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;Singular noun&lt;br&gt;&lt;input type=&quot;text&quot; name=&quot;noun2&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;Verb (past tense)&lt;br&gt;&lt;input type=&quot;text&quot; name=&quot;verb&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;Noun&lt;br&gt;&lt;input type=&quot;text&quot; name=&quot;noun3&quot;&gt;&lt;/p&gt;
+        &lt;input type=&quot;submit&quot;&gt;
+        &lt;/form&gt;
+
+
+        &lt;div&gt;
+            &lt;h1&gt;模板中使用模块&lt;/h1&gt;
+            {% module hello() %}
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="5">
+<li>console.js</li>
+</ol>
+<pre><code>console.log('console active')
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../py/tools.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../py/virtualenv.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../py/tools.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../py/virtualenv.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

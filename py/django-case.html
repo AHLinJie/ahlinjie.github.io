@@ -1,0 +1,561 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>django-case - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html" class="active"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: Django Case
+date: 2016-04-13
+category: python
+tag: django</h2>
+<p><strong>摘要:</strong></p>
+<p>在项目开发中使用的是django, django除了为别人所诟病的&quot;重&quot;之外还是有很多的好东西的
+比如说orm,比如说admin,比如说middleware,比如说cache等等,开发效率很快,分分钟就可以
+做一个后台管理.其官网的更新速度可以说是快得令人发指,记得我们的项目开始使用的是
+1.4.11, 15年出来了1.7,后面相继出来了1.8 1.9 现在项目都已经更新到1.10了.</p>
+<h4><a class="header" href="#django-使用过程中的小case" id="django-使用过程中的小case">django 使用过程中的小case</a></h4>
+<h5><a class="header" href="#django-template-tuple" id="django-template-tuple">Django template tuple</a></h5>
+<ul>
+<li>use choices in template</li>
+</ul>
+<pre><code>class P(models.Model):
+    A1 = 1
+    A2 = 2
+    A3 = 3
+    CHOICES = ((A1,u'des1'), (A2,u'des2'), (A3,u'des3'))
+</code></pre>
+<pre><code>render_to_response({&quot;choices&quot; : P.CHOICES})
+</code></pre>
+<pre><code>    &lt;div class=&quot;col-xs-2&quot;&gt;
+        &lt;select name=&quot;ware_by&quot; id=&quot;ware_by&quot;&gt;
+            {   % for  cid , show in choices %   }
+               &lt;option value=&quot;{   { cid }   }&quot;&gt;{  { show }  }&lt;/option&gt;
+            {    % endfor  %   }
+        &lt;/select&gt;
+    &lt;/div&gt;
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-debug" id="django-debug">django debug</a></h5>
+<ul>
+<li>
+<p>space not enough
+ubuntu 14.04
+python 2.7.6
+django 1.8.4</p>
+<pre><code>[2015-10-02 04:10:46,441 pyinotify ERROR] add_watch: cannot watch /usr/local/lib/python2.7/dist-packages/django/contrib/admin/locale/io/LC_MESSAGES/django.mo WD=-1, Errno=No space left on device (ENOSPC)
+</code></pre>
+<p><a href="http://stackoverflow.com/questions/27948612/django-test-run-environment-error-no-enough-space-left-on-disk">Refrence Link 1</a>
+<a href="http://blog.csdn.net/myarrow/article/details/7096460">Refrence Link 2</a>
+<a href="http://www.jincon.com/archives/119/">Refrence Link 3</a>
+run cmd in ubuntu terminal： <code>sudo sysctl fs.inotify.max_user_watches=16384</code></p>
+</li>
+<li>
+<p>system encoding error<br />
+ubuntu 14.04<br />
+python 2.7.6<br />
+django 1.8.4</p>
+</li>
+</ul>
+<pre><code>    UnicodeEncodeError: 'ascii' codec can't encode characters in position ...
+</code></pre>
+<pre><code>[Refrence Link](http://blog.csdn.net/sky_qing/article/details/9251735)
+</code></pre>
+<pre><code>    reload(sys)   
+    sys.setdefaultencoding('utf8')  
+</code></pre>
+<hr />
+<h5><a class="header" href="#add-a-logger-to-print-log-info-in-console" id="add-a-logger-to-print-log-info-in-console">Add A Logger To Print Log Info In Console</a></h5>
+<pre><code>LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.db.backends': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+    }
+}
+</code></pre>
+<hr />
+<h5><a class="header" href="#logger" id="logger">Logger</a></h5>
+<pre><code>import logging
+logger = logging.getLogger(__name__)
+logger.warn()
+logger.error()
+</code></pre>
+<h5><a class="header" href="#get-the-same-name-form-data-in-django-seriver" id="get-the-same-name-form-data-in-django-seriver">Get The Same 'name' Form Data In Django Seriver</a></h5>
+<ul>
+<li>form </li>
+</ul>
+<pre><code>&lt;form action=&quot;&quot; method=&quot;POST&quot;&gt;  
+&lt;input type=&quot;checkbox&quot; name=&quot;abc&quot; value=&quot;123&quot;&gt;  
+&lt;input type=&quot;checkbox&quot; name=&quot;abc&quot; value=&quot;456&quot;&gt;  
+&lt;input type=&quot;checkbox&quot; name=&quot;abc&quot; value=&quot;789&quot;&gt;  
+&lt;input type=&quot;checkbox&quot; name=&quot;abc&quot; value=&quot;110&quot;&gt;  
+&lt;/form&gt;
+</code></pre>
+<ul>
+<li>python code</li>
+</ul>
+<pre><code>a = request.POST.getlist('abc')
+In[i]: type(a)
+Out[i+1]: list
+</code></pre>
+<hr />
+<h5><a class="header" href="#http-request-save-many-value" id="http-request-save-many-value">Http Request Save Many Value</a></h5>
+<pre><code>    for k, v in request.data.iteritems():
+        k = str(k)
+        if not hasattr(instance, k): continue
+        instance.__setattr__(k, v)
+        instance.save()            
+</code></pre>
+<pre><code>    if hasattr(instance,k) and getattr(instance,k) != v:
+        setattr(instance, k, v)
+</code></pre>
+<hr />
+<h5><a class="header" href="#add-data-into-manytomanyfield" id="add-data-into-manytomanyfield">Add Data Into ManyToManyField</a></h5>
+<pre><code>my_obj.categories.add(fragmentCategory.objects.get(id=1))
+my_obj.categories.create(name='val1')
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-orm-only" id="django-orm-only">Django ORM: only</a></h5>
+<pre><code>In [29]: ss = shops.only(&quot;shoptime&quot;)
+In [30]: print ss.query
+SELECT `table_name`.`id`, `flashsale_tongji_shopping`.`shoptime` FROM `table_name`
+In [31]: 
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-orm-only-1" id="django-orm-only-1">Django ORM: only</a></h5>
+<pre><code>shops = ModelsName.objects.filter(linkid=5).only(&quot;shoptime&quot;).dates(&quot;shoptime&quot;,&quot;day&quot;,order='DESC')
+In [19]: shops
+Out[19]: [datetime.datetime(2015, 11, 27, 0, 0), datetime.datetime(2015, 11, 24, 0, 0),
+datetime.datetime(2015, 11, 4, 0, 0)]
+</code></pre>
+<p><strong>dates:de-weight the record</strong></p>
+<hr />
+<h5><a class="header" href="#django-orm-annotate" id="django-orm-annotate">Django ORM: annotate</a></h5>
+<ul>
+<li>if not use 'values' there will be <code>group_by</code> all fields</li>
+</ul>
+<pre><code>In [12]: clks = ModelName.objects.all()
+
+In [13]: a = clks.annotate(sum_clk = Sum('valid_num')).filter(id=5)
+
+In [14]: print a.query
+SELECT ... all fields ...
+SUM(`table_name`.`valid_num`) AS `sum_clk` FROM `table_name`
+WHERE `table_name`.`id` = 5  GROUP BY ... all fields ... ORDER BY `table_name`.`date` DESC
+</code></pre>
+<ul>
+<li>first <code>filter</code> then <code>annotate</code></li>
+</ul>
+<pre><code>In [17]: clks = ClickCount.objects.all()
+In [18]: a = clks.filter(linkid=5).annotate(sum_clk = Sum('valid_num'))
+In [19]: print a.query
+SELECT ... all fields ...
+SUM(`table_name`.`valid_num`) AS `sum_clk` FROM `table_name`
+WHERE `table_name`.`id` = 5  GROUP BY ... all fields ... ORDER BY `table_name`.`date` DESC
+</code></pre>
+<p><strong>so there are no diffrence 'filter' order about 'annotate'(django 1.4.11)</strong></p>
+<ul>
+<li>use values filter <code>group by</code> field</li>
+</ul>
+<pre><code>In [15]: b = clks.values('id').annotate(sum_clk=Sum(&quot;valid_num&quot;))
+
+In [16]: print b.query
+SELECT `table_name`.`id`, SUM(`table_name`.`valid_num`) AS `sum_clk` FROM 
+`table_name` GROUP BY `table_name`.`id` ORDER BY `table_name`.`date` DESC
+
+In [17]: 
+
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-orm-filter-range" id="django-orm-filter-range">Django ORM: filter range</a></h5>
+<pre><code>In [22]: tf =  datetime.date(2015, 8, 21)
+In [23]: to = datetime.date(2015, 10, 22)
+In [24]: xxx = ModelsName.objects.filter(created__range=(tf,to))
+In [26]: xxx.values('created')
+Out[26]: [{'created': datetime.date(2015, 8, 21)}, {'created': datetime.date(2015, 8, 21)},
+{'created': datetime.date(2015, 10, 22)}, {'created': datetime.date(2015, 10, 22)}]
+</code></pre>
+<p><strong>range filter contains the boundaries</strong></p>
+<p><code>created__range=(tf,to)</code> could replace <code>created__range=[tf,to]</code></p>
+<hr />
+<h5><a class="header" href="#django-orm-extra" id="django-orm-extra">Django ORM: extra</a></h5>
+<ul>
+<li>select
+xx = queryset.extra(select={'alias_name':'model_field REGEXP &quot;^abc&quot;'}) </li>
+</ul>
+<pre><code>SELECT (model_field REGEXP &quot;abc&quot;) AS `alias_name` FROM `table_name` 
+</code></pre>
+<ul>
+<li>where
+ss = queryset.extra(where={'not model_field REGEXP &quot;^abc&quot;'})</li>
+</ul>
+<pre><code>SELECT * FROM &lt;table_name&gt; WHERE NOT &lt;field_name&gt; REGEXP '^abc';
+</code></pre>
+<p><strong>add and senctenc in extra</strong></p>
+<pre><code>sss = ModelName.objects.extra(select={'created_d':'date(created)'}).values('created_d','customer').annotate(sum_value=Sum('value')) 
+</code></pre>
+<p><em>convert the datetime to date then group by</em></p>
+<pre><code>SELECT (date(created)) AS `created_d`, `table_name`.`customer`, SUM(`table_name`.`value`) AS `sum_value` FROM 
+    `table_name` GROUP BY `table_name`.`customer`, (date(created)) ORDER BY NULL
+</code></pre>
+<ul>
+<li>extra and order by</li>
+</ul>
+<pre><code>queryset = queryset.extra(select={'refund_rate': 'total_refund_num/total_sale_num'}).order_by(
+                'refund_rate')
+</code></pre>
+<hr />
+<h5><a class="header" href="#regex" id="regex">Regex</a></h5>
+<pre><code>for modelid in modelids:
+    x = r'(,|^)\s*' + str(modelid) + r'\s*(,|$)'
+    descriptions.extend(
+        ModelName.objects.filter(detail_modelids__regex=x).values('id',
+                                               'detail_modelids',
+                                               'description'))
+</code></pre>
+<hr />
+<h5><a class="header" href="#same-field-filter" id="same-field-filter">Same Field Filter</a></h5>
+<pre><code>from django.db.models import F                     
+ModelX.objects.filter(a=F('b'))
+
+SELECT * FROM `table` WHERE `table`.`a` = (`table`.`b`)
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-modify-model-field-step" id="django-modify-model-field-step">Django Modify Model Field Step</a></h5>
+<ol>
+<li>modify the model fields</li>
+<li>python manage.py makemigrations <app></li>
+<li>auto gen the migrations files in migrations director(do not modify the auto increce num,but can change the name)</li>
+<li>python manage.py migrate <app></li>
+</ol>
+<p>exception handler comands:</p>
+<p>python manage.py migrate <app> --list  # show the migrations fils exced list</p>
+<p>python manage.py migrate <app> &lt;0003&gt; --fake  # fake the 0003 file was excuted, if you want to skip a migrate file</p>
+<hr />
+<h5><a class="header" href="#django-dumpdata-command" id="django-dumpdata-command">Django Dumpdata Command</a></h5>
+<pre><code>python manage.py dumpdata coupon.UserCoupon --pks=16,17,18,19,20,21,22,23,24,25,26,27,28 --indent=2 --format=json &gt; flashsale/coupon/fixtures/test.flashsale.coupon.usercoupon.json 
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-limits-of-authority" id="django-limits-of-authority">Django Limits Of Authority</a></h5>
+<p><a href="http://www.tuicool.com/articles/RB3yAb">Reference Link</a></p>
+<hr />
+<h5><a class="header" href="#django-setting-celery-work" id="django-setting-celery-work">Django Setting Celery Work</a></h5>
+<p><code>BROKER_URL = 'amqp://linjie:123123@127.0.0.1:5672/vhost1'</code>
+<code>python manage.py celery worker -l info</code> </p>
+<hr />
+<h5><a class="header" href="#django-transaction" id="django-transaction">Django Transaction</a></h5>
+<pre><code>@transaction.commit_on_success
+@csrf_exempt
+def mama_Verify_Action(request):
+    mama_id = request.GET.get('id')
+</code></pre>
+<p><a href="http://blog.sina.com.cn/s/blog_3fe961ae010167ah.html">Referance Link</a></p>
+<hr />
+<h5><a class="header" href="#django-admin-search_fields" id="django-admin-search_fields">Django Admin: search_fields</a></h5>
+<p>django admin search_fields()  # search str in database where search input content</p>
+<ol>
+<li>search_fields=['first_name', 'last_name'] 
+1.1 searches for“ john lennon” 
+WHERE (first_name ILIKE '%john%' OR last_name ILIKE '%john%')
+AND (first_name ILIKE '%lennon%' OR last_name ILIKE '%lennon%')</li>
+<li>search_fields=['^first_name', '^last_name']
+2.1
+WHERE (first_name ILIKE 'john%' OR last_name ILIKE 'john%')
+AND (first_name ILIKE 'lennon%' OR last_name ILIKE 'lennon%')</li>
+<li>search_fields=['=first_name', '=last_name']
+WHERE (first_name ILIKE 'john' OR last_name ILIKE 'john')
+AND (first_name ILIKE 'lennon' OR last_name ILIKE 'lennon')</li>
+</ol>
+<hr />
+<h5><a class="header" href="#get-ip-address" id="get-ip-address">Get Ip Address</a></h5>
+<pre><code>def get_client_ip(request):
+try:
+    real_ip = request.META['HTTP_X_FORWARDED_FOR']
+    regip = real_ip.split(&quot;,&quot;)[0]
+except:
+    try:
+        regip = request.META['REMOTE_ADDR']
+    except:
+        regip = &quot;&quot;
+return regip
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-restframework-request-update" id="django-restframework-request-update">Django RestFrameWork Request Update</a></h5>
+<pre><code>query dict update : 
+request.data.update({&quot;turns_num&quot;: turns_num}) 
+# update directly in create method
+</code></pre>
+<pre><code>request.data._mutable=True 
+#  use _mutable to open mutable the request.data in update method
+request.data.update({&quot;a&quot;: 123})
+request.data._mutable=False # close mutable
+</code></pre>
+<hr />
+<h5><a class="header" href="#auto_now-datetime" id="auto_now-datetime">auto_now datetime</a></h5>
+<pre><code>modified = models.DateTimeField(auto_now=True, db_index=True, verbose_name=u'修改日期')
+instance.save()	# that will be change the modified field
+instance.save(update_fields=['field']) # does not change the modified 
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-querydict-to-dict" id="django-querydict-to-dict">Django QueryDict to Dict</a></h5>
+<pre><code>QueryDict.dict()
+# fro example in django restframework
+request.data.dict()
+</code></pre>
+<hr />
+<h5><a class="header" href="#django-cache" id="django-cache">django cache</a></h5>
+<pre><code>
+from django.views.decorators.cache import cache_page
+from django.http import HttpResponse
+import json
+
+
+@cache_page(10, key_prefix=&quot;test&quot;)
+def test_cache(request):
+    print (&quot;no cache&quot;)
+    return HttpResponse(json.dumps({&quot;device&quot;: 'iphone'}))
+
+
+def ttt():
+    from django.core.cache import cache
+
+    cache.set('my_key', 'hello, world!', 30)  # 缓存key value 缓存时间
+    cache.get('my_key')
+    cache.add('another_key', 'new value', 30)  # 如果是已经添加过的则返回False 否则添加到缓存并返回True
+    cache.get_many(['another_key', 'my_key'])  # 获取多个key
+    cache.set_many({'a': 1, 'b': 2, 'c': 3})   # 设置多个key
+    cache.delete('a')  # 删除缓存
+    cache.delete_many(['a', 'b', 'c'])  # 删除多个缓存
+    cache.clear()  # 清楚所有缓存  注意使用
+
+    cache.set('my_key', 'hello world!', version=2)  # 设置版本
+    cache.get('my_key')
+    cache.get('my_key', version=2)  # 获取对应版本的缓存
+    cache.incr_version('my_key', version=2)  # 如果设置了 version的需要指定version升级 否则异常
+
+</code></pre>
+<p><a href="https://docs.djangoproject.com/en/1.10/topics/cache/">文档地址</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../py/design-model.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../py/django-on-commit.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../py/design-model.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../py/django-on-commit.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

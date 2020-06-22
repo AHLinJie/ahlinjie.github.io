@@ -1,0 +1,742 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>simple-case - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html" class="active"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: python代码片段
+date: 2015-9-28
+category: python
+tag: python</h2>
+<p><strong>摘要:</strong>
+Python代码片段摘抄,一些基础内容和一些常用的脚本,方便以后使用查阅.</p>
+<h4><a class="header" href="#python-stamp" id="python-stamp">Python Stamp</a></h4>
+<ul>
+<li>stamp to datetime</li>
+</ul>
+<pre><code>import datetime
+import time
+timeStamp = 1381419600
+In [130]: date_time
+Out[130]: datetime.datetime(2013, 10, 10, 15, 40)
+</code></pre>
+<ul>
+<li>stamp output str</li>
+</ul>
+<pre><code>timeStamp = 1381419600
+timeArray = time.localtime(timeStamp)
+time_output = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, timeArray)
+time_output == &quot;2013-10-10 23:40:00&quot;
+</code></pre>
+<ul>
+<li>stamp save to database</li>
+</ul>
+<pre><code>set_time = datetime.datetime.strptime(time_str, '%Y-%m-%d %H:%M:%S')
+</code></pre>
+<ul>
+<li>date converse to datetime</li>
+</ul>
+<pre><code>datetime.datetime.combine(instance.sale_time, datetime.time(0, 0))
+</code></pre>
+<hr />
+<h4><a class="header" href="#python-basestring" id="python-basestring">Python Basestring</a></h4>
+<pre><code>          object
+             |
+         basestring
+            / \
+           /   \
+         str  unicode
+         
+&gt;&gt;&gt; string1 = &quot;I am a plain string&quot;
+&gt;&gt;&gt; string2 = u&quot;I am a unicode string&quot;
+&gt;&gt;&gt; isinstance(string1, str)
+True
+&gt;&gt;&gt; isinstance(string2, str)
+False
+&gt;&gt;&gt; isinstance(string1, unicode)
+False
+&gt;&gt;&gt; isinstance(string2, unicode)
+True
+&gt;&gt;&gt; isinstance(string1, basestring)
+True
+&gt;&gt;&gt; isinstance(string2, basestring)
+True
+</code></pre>
+<hr />
+<h4><a class="header" href="#python-list-dict" id="python-list-dict">Python List Dict</a></h4>
+<pre><code>a=range(10)
+b={}
+b=b.fromkeys(a)
+c=list(b.keys())
+</code></pre>
+<hr />
+<h4><a class="header" href="#python-class-attribute" id="python-class-attribute">Python Class Attribute</a></h4>
+<pre><code>class Student(object):
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score must be an integer!')
+        if value &lt; 0 or value &gt; 100:
+            raise ValueError('score must between 0 ~ 100!')
+        self._score = value
+</code></pre>
+<ul>
+<li>
+<p>Python <code>@property</code> make a self function to a attribute to call</p>
+</li>
+<li>
+<p><code>@property</code> gen a decrator <code>@score.setter</code>, the score is decratored by '@property', setter is '@property' to control the value for that attribute.</p>
+</li>
+<li>
+<p>before st.score assignment</p>
+</li>
+</ul>
+<pre><code>In [54]: st._
+st.__class__         st.__format__        st.__module__        st.__repr__          st.__subclasshook__
+st.__delattr__       st.__getattribute__  st.__new__           st.__setattr__       st.__weakref__
+st.__dict__          st.__hash__          st.__reduce__        st.__sizeof__        
+st.__doc__           st.__init__          st.__reduce_ex__     st.__str__           
+
+In [54]: st.score = 60
+</code></pre>
+<ul>
+<li>after st.score assignment gen a _score attribute</li>
+</ul>
+<pre><code>In [55]: st._
+st.__class__         st.__format__        st.__module__        st.__repr__          st.__subclasshook__
+st.__delattr__       st.__getattribute__  st.__new__           st.__setattr__       st.__weakref__
+st.__dict__          st.__hash__          st.__reduce__        st.__sizeof__        st._score
+st.__doc__           st.__init__          st.__reduce_ex__     st.__str__           
+</code></pre>
+<ul>
+<li>assignment test</li>
+</ul>
+<pre><code>In [55]: st._score=101
+
+In [56]: st.score = 101
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+&lt;ipython-input-56-c8cebab0a5ba&gt; in &lt;module&gt;()
+----&gt; 1 st.score = 600
+
+&lt;ipython-input-50-363f41b24e8b&gt; in score(self, value)
+      8             raise ValueError(&quot;not int type&quot;)
+      9         if value &lt;0 or value&gt;100:
+---&gt; 10             raise ValueError(&quot;out range 0-100&quot;)
+     11         self._score = value
+     12 
+
+ValueError: out range 0-100
+</code></pre>
+<hr />
+<h5><a class="header" href="#dict-list-summation" id="dict-list-summation">Dict List Summation</a></h5>
+<ul>
+<li><a href="http://stackoverflow.com/questions/3490738/how-to-sum-dict-elements">from</a> </li>
+</ul>
+<pre><code>&gt;&gt;&gt; dict1 = [{'a':2, 'b':3},{'a':3, 'b':4}]
+&gt;&gt;&gt; from operator import itemgetter
+&gt;&gt;&gt; {k:sum(map(itemgetter(k), dict1)) for k in dict1[0]}        # Python2.7+
+{'a': 5, 'b': 7}
+&gt;&gt;&gt; dict((k,sum(map(itemgetter(k), dict1))) for k in dict1[0])  # Python2.6
+{'a': 5, 'b': 7}
+</code></pre>
+<hr />
+<h4><a class="header" href="#sort" id="sort">Sort</a></h4>
+<ol>
+<li>Dict List Sort</li>
+</ol>
+<pre><code>a = sorted(dict_list, key=lambda k: k[sort_field], reverse=True)
+</code></pre>
+<ol start="2">
+<li>Dict Sort</li>
+</ol>
+<pre><code>import operator
+x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
+sorted_x = sorted(x.items(), key=operator.itemgetter(1))
+</code></pre>
+<hr />
+<h4><a class="header" href="#float-amount-decimal" id="float-amount-decimal">Float Amount Decimal</a></h4>
+<pre><code>  amount = int(decimal.Decimal(cashout_amount) * 100)
+</code></pre>
+<hr />
+<h4><a class="header" href="#about-object-copy" id="about-object-copy">About Object Copy</a></h4>
+<pre><code>from copy import deepcopy
+t = ModeleName.objects.get(id=1)
+t1 = deepcopy(t)
+t1.id = None
+t1.save()  # save the object as a django model instance
+</code></pre>
+<hr />
+<h4><a class="header" href="#python-map" id="python-map">Python Map</a></h4>
+<ul>
+<li>usually</li>
+</ul>
+<pre><code>def printlog(x):
+    print &quot;log&quot;, x
+    return 
+map(printlog, range(10))
+</code></pre>
+<ul>
+<li>take a arg</li>
+</ul>
+<pre><code>def test(message):
+    def _wrapper(x):
+    	print &quot;log&quot;, x , message
+    	return 
+    return _wrapper
+
+map(test('hello world'), range(10))
+
+</code></pre>
+<hr />
+<h4><a class="header" href="#pickle-serializer" id="pickle-serializer">pickle serializer</a></h4>
+<ul>
+<li>write the memory data to hard disk</li>
+<li>get the same data in memory by call pickle again</li>
+</ul>
+<pre><code>import pickle
+
+a = {
+    &quot;linjie&quot;: [170,120,31],
+    &quot;zhangwei&quot;: [176,140,34],
+    &quot;lintao&quot;: [170,120,30]
+}# prepare data stracture
+
+with file('pickle_test.pkl', 'wb') as f:
+    pickle.dump(a, f) # serialize
+
+f = file('pickle_test.pkl') # open a file
+x = pickle.load(f)  # unserialize to load the data
+f.close()   # close file
+x == a
+True
+</code></pre>
+<pre><code>import pickle
+         
+data = {'foo': [1,2,3],
+        'bar': ('Hello','world!'),
+        'baz': True}
+jar = open('data.pk1', 'wb')
+pickle.dump(data, jar) # write pickle data to jar
+jar.close()
+
+
+import pickle
+      
+pk1_file = open('data.pk1','rb') # connect the pickle data
+data = pickle.load(pk1_file) # loada data to var
+print data
+pk1_file.close()
+</code></pre>
+<ul>
+<li><code>attention１：</code> Dump could be many times，but store the last time data</li>
+<li><code>attention２：</code> Throw a error when dump data is None</li>
+<li><code>attention３：</code> Do close file when </li>
+</ul>
+<hr />
+<h4><a class="header" href="#python-mysql" id="python-mysql">Python Mysql</a></h4>
+<pre><code>import MySQLdb 
+try: 
+    conn=MySQLdb.connect(host='localhost',user='root',passwd='root',db='test',port=3306) 
+    cur=conn.cursor() 
+    cur.execute('select * from user') 
+    cur.close() 
+    conn.close() 
+except MySQLdb.Error,e: 
+    print &quot;Mysql Error %d: %s&quot; % (e.args[0], e.args[1])
+
+</code></pre>
+<pre><code>
+import MySQLdb
+
+try: 
+    conn=MySQLdb.connect(host='localhost',user='root',passwd='root',port=3306) 
+    cur=conn.cursor() 
+
+    cur.execute('create database if not exists python') 
+    conn.select_db('python') 
+    cur.execute('create table test(id int,info varchar(20))') 
+
+    value=[1,'hi rollen'] 
+    cur.execute('insert into test values(%s,%s)',value) 
+
+    values=[] 
+    for i in range(20): 
+        values.append((i,'hi rollen'+str(i))) 
+        cur.executemany('insert into test values(%s,%s)',values) 
+        cur.execute('update test set info=&quot;I am rollen&quot; where id=3') 
+
+    conn.commit() 
+    cur.close() 
+    conn.close() 
+
+except MySQLdb.Error,e: 
+    print &quot;Mysql Error %d: %s&quot; % (e.args[0], e.args[1])
+
+</code></pre>
+<hr />
+<h4><a class="header" href="#python-connect-ssh" id="python-connect-ssh">Python Connect SSH</a></h4>
+<pre><code>#!/usr/bin/python
+#-*- coding:utf-8 -*-
+import sys, time, os
+
+try:
+    import pexpect
+except ImportError:
+    print &quot;You must install pexpect module&quot;
+    sys.exit(1)
+
+addr_map = {
+'v3' :('root@192.168.1.162', 'sina@2009'),
+'dev':('test016@192.168.1.136', 'test016'),
+}
+
+try:
+    key = sys.argv[1]
+    host = addr_map[key]
+except:
+    print &quot;argv error, use it link jssh v3, v3 must defined in addr_map&quot;
+    sys.exit(1)
+server = pexpect.spawn('/usr/bin/ssh %s' % host[0])
+server.expect('.*ssword:')
+server.sendline(host[1])
+server.interact()
+
+</code></pre>
+<pre><code># coding=utf-8
+
+import sys, time, os
+try:
+    import pexpect
+except ImportError:
+    print &quot;You must install pexpect module&quot;
+    sys.exit(1)
+
+git_map = {
+    'dbnote': 'dbnote',
+    'jsnote': 'jsnote',
+    'ljnote': 'ljnote',
+    'pynote': 'pynote',
+    'other': 'other',
+}
+
+def main():
+    try:
+        key = sys.argv[1]
+        git_dir = git_map[key]
+    except:
+        print &quot;argv error&quot;
+        sys.exit(1)
+    os.chdir('/home/jielin/workspace/gitbooks/%s' % git_dir)
+    child = pexpect.spawn('git push origin master')
+    child.expect('Username for .*:')
+    child.sendline('you account for gitbook')
+    child.expect('Password for .*:')
+    child.sendline('you passwd for gitbook')
+    child.expect(pexpect.EOF)
+    print &quot;push result: &quot;, child.before
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception, e:
+        print str(e.message)
+        sys.exit(0)
+
+</code></pre>
+<p><a href="http://blog.csdn.net/lwnylslwnyls/article/details/8239791">Reference Link1</a></p>
+<p><a href="http://blog.csdn.net/lwnylslwnyls/article/details/8239791">Reference Link2</a></p>
+<p><a href="http://www.thinksaas.cn/topics/0/164/164786.html">Reference Link2</a></p>
+<hr />
+<h4><a class="header" href="#dict-list-groupby" id="dict-list-groupby">Dict List GroupBy</a></h4>
+<pre><code>from itertools import groupby
+from operator import itemgetter
+x = [
+    {'group': 'b', 'num': 4},
+    {'group': 'a', 'num': 1},
+    {'group': 'b', 'num': 3},
+    {'group': 'b', 'num': 5},
+    {'group': 'c', 'num': 6},
+    {'group': 'a', 'num': 2},
+]
+x.sort(key=itemgetter('group'))  # must sort the list before groupby
+
+groups = []
+for g, items in groupby(x, key=itemgetter('group')):
+    cate = {
+        'name': g,
+        'values': []
+    }
+    for i in items:
+        cate['values'].append(i)
+    groups.append(cate)
+    
+    
+Out[5]: 
+[{'name': 'a', 'values': [{'group': 'a', 'num': 1}, {'group': 'a', 'num': 2}]},
+ {'name': 'b',
+  'values': [{'group': 'b', 'num': 4},
+   {'group': 'b', 'num': 3},
+   {'group': 'b', 'num': 5}]},
+ {'name': 'c', 'values': [{'group': 'c', 'num': 6}]}]
+
+</code></pre>
+<hr />
+<p>Python Email</p>
+<pre><code># coding=utf-8
+from __future__ import unicode_literals, absolute_import
+import imaplib
+import smtplib
+import email
+from email.header import decode_header
+from email.mime.text import MIMEText
+
+
+def fetch_mail():
+    conn = imaplib.IMAP4_SSL(&quot;imap.exmail.qq.com&quot;, 993)
+    conn.login(&quot;jie.lin@xiaolumeimei.com&quot;, &quot;password&quot;)
+    conn.list()
+    conn.select(&quot;INBOX&quot;)
+    type, data = conn.search(None, 'ALL')
+    msgList = data[0].split()
+    last = msgList[len(msgList) - 1]
+    type, data = conn.fetch(last, '(RFC822)')
+    msg = email.message_from_string(data[0][1])
+
+    # print msg.keys()
+    # ['Received', 'X-QQ-FEAT',
+    # 'X-QQ-MAILINFO', 'X-QQ-mid',
+    # 'X-QQ-ORGSender', 'DKIM-Signature', 'X-EnvId',
+    # 'Received', 'Date', 'From', 'To', 'Message-ID',
+    # 'Subject', 'MIME-Version', 'Content-Type']
+    msg_from = decode_header(msg.get('From'))
+    print msg_from, msg_from[0][0]
+    # [('\xe9\x98\xbf\xe9\x87\x8c\xe4\xba\x91', 'utf-8'), ('&lt;monitor@monitor.aliyun.com&gt;', None)] 阿里云
+    print msg.get_payload()
+    # [&lt;email.message.Message instance at 0x7f9b05fd4170&gt;]
+    msg = msg.get_payload()[0]
+    content = msg.get_payload(decode=True)
+    print content
+
+
+def send_mail():
+    # Open a plain text file for reading.  For this example, assume that
+    # the text file contains only ASCII characters.
+    # fp = open(textfile, 'rb')
+    # Create a text/plain message
+    # msg = MIMEText(fp.read())
+    msg = MIMEText('hello world')
+    # fp.close()
+
+    # me == the sender's email address
+    # you == the recipient's email address
+    msg['Subject'] = 'The contents of %s' % 'www'
+    msg['From'] = 'jie.lin@xiaolumeimei.com'
+    msg['To'] = '1051631394@qq.com'
+
+    # Send the message via our own SMTP server, but don't include the
+    # envelope header.
+    s = smtplib.SMTP_SSL('smtp.exmail.qq.com', 465)
+    s.login(&quot;jie.lin@xiaolumeimei.com&quot;, &quot;password&quot;)
+    s.sendmail('jie.lin@xiaolumeimei.com', ['1051631394@qq.com'], msg.as_string())
+    s.quit()
+
+if __name__ == '__main__':
+    fetch_mail()
+    send_mail()
+
+</code></pre>
+<hr />
+<h4><a class="header" href="#脚本输入用户明密码" id="脚本输入用户明密码">脚本输入用户明密码</a></h4>
+<pre><code># coding=utf-8
+
+import sys, time, os
+try:
+    import pexpect
+except ImportError:
+    print &quot;You must install pexpect module&quot;
+    sys.exit(1)
+
+git_map = {
+    'dbnote': 'dbnote',
+    'jsnote': 'jsnote',
+    'ljnote': 'ljnote',
+    'pynote': 'pynote',
+    'other': 'other',
+}
+
+def main():
+    try:
+        key = sys.argv[1]
+        git_dir = git_map[key]
+    except:
+        print &quot;argv error&quot;
+        sys.exit(1)
+    os.chdir('/home/jielin/workspace/gitbooks/%s' % git_dir)
+    child = pexpect.spawn('git pull origin master')
+    child.expect('Username for .*:')
+    child.sendline('username')
+    child.expect('Password for .*:')
+    child.sendline('password here')
+    child.expect(pexpect.EOF)
+    print &quot;pull result is :&quot;, child.before
+
+    child = pexpect.spawn('git push origin master')
+    child.expect('Username for .*:')
+    child.sendline('username')
+    child.expect('Password for .*:')
+    child.sendline('password here')
+    child.expect(pexpect.EOF)
+    print &quot;push result: &quot;, child.before
+
+if __name__ == '__main__':
+    try:
+        main()
+    except Exception, e:
+        print str(e.message)
+        sys.exit(0)
+
+</code></pre>
+<h4><a class="header" href="#目录扫描" id="目录扫描">目录扫描</a></h4>
+<pre><code>import os
+import sys
+
+  
+def scan_files(directory,prefix=None,postfix=None):
+  files_list=[]
+
+  for root, sub_dirs, files in os.walk(directory):
+    for special_file in files:
+      if postfix:
+        if special_file.endswith(postfix):
+          files_list.append(os.path.join(root,special_file))
+      elif prefix:
+        if special_file.startswith(prefix):
+          files_list.append(os.path.join(root,special_file))
+      else:
+        files_list.append(os.path.join(root,special_file))  
+  return files_list
+
+if __name__ == '__main__':
+    directory = sys.argv[1]
+    l = scan_files(directory)
+    print l
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../py/scrapy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../py/sort.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../py/scrapy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../py/sort.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

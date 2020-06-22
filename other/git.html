@@ -1,0 +1,446 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>git - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html" class="active"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: Git命令
+date: 2015-07-23
+category: 版本控制
+tag: git</h2>
+<p><strong>摘要:</strong>
+传说林纳斯嫌弃svn不好用就自己写了一个版本控制器叫做git.然后git成了很多人使用的
+版本控制器,当然排除他的个人影响力之外git是一个非常了不起的版本控制工具.当然git
+好用还是在命令行里面,一下是在命令行里面的一些命令,方便自己查阅用到.git还有很多
+很特别和使用的功能.比如subtree等等.</p>
+<hr />
+<h4><a class="header" href="#global-config" id="global-config">global config</a></h4>
+<ul>
+<li>git config --global color.ui true # show the color in ui </li>
+<li>git config --global user.name &quot;youname&quot; </li>
+<li>git config --global user.email &quot; xxxx@xx.com&quot; vjknct</li>
+<li>git config -u-list  # show the git config list</li>
+</ul>
+<hr />
+<h4><a class="header" href="#config-ignore-file" id="config-ignore-file">Config Ignore File</a></h4>
+<p>Touch a file with named <code>.gitignore</code>  and save in git init dir .
+edit the file you want to ignore </p>
+<hr />
+<h4><a class="header" href="#git-usually-command" id="git-usually-command">Git Usually Command</a></h4>
+<ul>
+<li>
+<p>cd adir</p>
+</li>
+<li>
+<p>git init # init a git dit</p>
+</li>
+<li>
+<p>git add readme.txt # 添加文件（修改的文件或者新的文件）到暂存区 </p>
+</li>
+<li>
+<p>git commit -m &quot;wrote a readme file&quot; # 提交暂存区中所有文件到当前分支中 -m标注提交信息 </p>
+</li>
+<li>
+<p>git status # 查看仓库状态 </p>
+</li>
+<li>
+<p>git commit readme.txt -m &quot;commit the modefied file&quot; </p>
+</li>
+</ul>
+<hr />
+<h4><a class="header" href="#git-log" id="git-log">Git Log</a></h4>
+<ul>
+<li>git log # 查看git操作的日志信息（提交信息 </li>
+<li>git log -5 # the last 5 logs</li>
+<li>git log --pretty=oneline # show log main commit info in oneline by every log</li>
+<li>git log --graph --pretty=oneline --abbrev-commit # 查看分支合并情况 </li>
+<li>git log --graph # 查看分支合并图（左侧的那条线或者分支线） </li>
+</ul>
+<hr />
+<h4><a class="header" href="#about-reset-command" id="about-reset-command">About reset command</a></h4>
+<ul>
+<li>git reset --hard HEAD^ # 版本回退到上一个版本 </li>
+<li>git reset --hard HEAD~3 # 版本回退3次的版本 </li>
+<li>git reflog # 查看 commit-id 以及操作信息 </li>
+<li>git reset --hard <commit-id> # 版本回退找回新版本 </li>
+<li>git reset HEAD filename # 将已经添加到暂存区的撤销到工作区 </li>
+<li>git reset HEAD filename # 移动指向被删除的文件的指针到删除前 </li>
+</ul>
+<hr />
+<h4><a class="header" href="#git-diff" id="git-diff">Git Diff</a></h4>
+<p>git diff # 查看工作区的文件内容和暂存区文件内同的不同部分 
+git diff HEAD -- <filename> # 查看暂存区和版本库中文件内容的不同部分 </p>
+<hr />
+<h4><a class="header" href="#git-checkout" id="git-checkout">Git Checkout</a></h4>
+<ul>
+<li>git checkout -- filename # remove you modify</li>
+<li>git checkout f5810e08df0cb7cf82608d65cdb709cb430df2ea path/to/file # assagin a file conten to the commit id</li>
+</ul>
+<hr />
+<h4><a class="header" href="#git-rm" id="git-rm">Git rm</a></h4>
+<ul>
+<li>git rm filename 
+删除和git库的关联，同时删除文件,如果通过 rm 直接删除的则 利用git status 查看时候回有提醒删除文件，touch一个同名的文件则git status 则会取消提醒了 </li>
+</ul>
+<hr />
+<h4><a class="header" href="#about-github" id="about-github">About Github</a></h4>
+<ul>
+<li>
+<p>ssh-keygen -t rsa -C &quot; xxx@xx.com&quot; # create file cmd by ssh
+add the ssh puh key file into github setting
+注册github的账号：AHLinJie 
+在github中新建test文件夹 </p>
+</li>
+<li>
+<p>git remote add origin  https://github.com/AHLinJie/test.git # 添加远程仓库名称为origin </p>
+</li>
+<li>
+<p>git remote # 查看远程仓库名称 </p>
+</li>
+<li>
+<p>git remote -v # 查询更详细的远程仓库信息 </p>
+</li>
+<li>
+<p>git push -u origin master # 将本地库推送到远程仓库中 并建立本地与远程的master分支的关联  随后再次推送的时候就没必要用-u 参数 </p>
+</li>
+<li>
+<p>git push origin dev # 推送dev分支到远程仓库 </p>
+</li>
+<li>
+<p>git clone  https://github.com/AHLinJie/test2.git # 克隆github上面的远程文件到本地  前提是有远程的存在 </p>
+</li>
+</ul>
+<p>注意： 
+1. 远程克隆的文件包含了.git的文件，status是clean的 
+2. 克隆到本地的文件夹都是没有提交的，但是在克隆的文件夹内是提交的，这里要注意区分版本库的范围，可以对应的目录下status查看下 </p>
+<hr />
+<h4><a class="header" href="#git-branch" id="git-branch">Git Branch</a></h4>
+<ul>
+<li>git checkout -b dev # 创建名称为dev的分支，并且切换到该分支 </li>
+<li>git branch dev # 创建名称为dev的分支 </li>
+<li>git branch # 查看当前分支 * 表示的分支 </li>
+<li>git branch --all # 查看所有包括远程的分支 </li>
+<li>git checkout master # 回到master分支 </li>
+<li>git merge dev # 合并dev分支到master分支 </li>
+<li>git merge --no-ff -m &quot;merge with no-f&quot; dev  # 或者使用--no-ff模式来提交保留分支历史信息 </li>
+<li>git branch -d dev # 删除dev分支</li>
+<li>git push origin --delete branchname  # 删除远程分支</li>
+</ul>
+<p>注意合并冲突内容： 
+在合并的分支中处理冲突的内容（手动修改） </p>
+<hr />
+<h4><a class="header" href="#branch-strategy" id="branch-strategy">Branch Strategy：</a></h4>
+<ul>
+<li>
+<p>branch master: </p>
+<ol>
+<li>非常稳定，时刻要和远程保持同步 </li>
+<li>用来发布新版本 </li>
+<li>禁止其他操作 
+-branch dev： </li>
+<li>用于开发测试，团队开发 </li>
+<li>保持与远程同步 </li>
+</ol>
+</li>
+<li>
+<p>bug branch:</p>
+<ol>
+<li>git checkout -b issure-101 # 新建一个bug处理分支 </li>
+<li>在dev分支 git stash # 存储工作现场，等处理bug后继续开发工作时恢复现场用 </li>
+<li>选择要修复bug用的分支去处理bug问题 </li>
+<li>等问题处理好了 </li>
+<li>处理好后，回到工作现场所在的分支 </li>
+<li>git stash list # 查看保存的现场信息 </li>
+<li>git stash pop # 恢复现场（删除stash的信息） </li>
+</ol>
+</li>
+<li>
+<p>feature branch: </p>
+<ol>
+<li>开发过程中添加新特性、新功能 </li>
+<li>git checkout -b feature-weixin </li>
+<li>新建文件、编码开发、添加、提交、合并 </li>
+<li>git branch -d feature-weixin # 删除该分区 </li>
+<li>如果因为经费不足等问题要中止该功能开发 git branch -D feature-weixin # 强行删除该分支 </li>
+</ol>
+</li>
+</ul>
+<hr />
+<h4><a class="header" href="#多人协作开发" id="多人协作开发">多人协作开发：</a></h4>
+<ul>
+<li>git branch --set-upstream dev origin/dev # 指定本地dev分支与远程origin/dev分支的链接 </li>
+<li>git checkout -b dev origin/dev # 创建远程的origin dev分支到本地，如果有dev存在，则可以-d后重新建立 </li>
+<li>git push origin dev # 推送本地分支到远程分支 </li>
+</ul>
+<hr />
+<h4><a class="header" href="#git-tag" id="git-tag">Git Tag</a></h4>
+<ul>
+<li>git tag v1.01 # 为当前的commit id （版本）设置标签 切换到对应分支 </li>
+<li>git log --pretty=oneline --abbrev-commit # 查询历史版本的commit id 设置标签 </li>
+<li>git tag commit-id # 指定历史commit记录打标签 </li>
+<li>git tag -a v1.03 -m &quot;create a ......&quot; commit-id # 指定commit-id 和注释的版本标签 </li>
+<li>git show <tag-name> # 查看标签信息 </li>
+<li>git tag -s v1.05 -m &quot;......&quot; <commit-id> # 使用秘钥签名一个标签 前提是安装了PGP(GnuPG) 没有安装则会报错 </li>
+<li>git tag -d <tagname> # 删除tag标签 </li>
+<li>git push origin <tagname> # 推送标签到远程仓库 </li>
+<li>git push origin --tags # 推送本地所有标签到远程仓库 </li>
+<li><strong>删除远程tag标签操作 首先删除本地的然后删除远程的</strong></li>
+<li>git tag -d <tagname> # 删除本地的tag标签 </li>
+<li>git push origin :refs/tags/<tagname> # 删除远程的tag标签 </li>
+</ul>
+<hr />
+<h4><a class="header" href="#搭建git服务器" id="搭建git服务器">搭建git服务器：</a></h4>
+<p>/home/lijie/gitbar # 远程仓库目录，这里是Ubuntu虚拟机中的目录 </p>
+<ol>
+<li>
+<p>sudo apt-get install git </p>
+</li>
+<li>
+<p>sudo adduser git  # 创建用户 </p>
+</li>
+<li>
+<p>sudo git init --bare sample.git # 创建裸仓库（没有工作区：服务器是纯粹共享用的） </p>
+</li>
+<li>
+<p>edit /etc/passwd
+4.1 git:x:1001:1001:,,,:/home/git:/bin/bash 改为： 
+git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell # 禁用shell登陆 </p>
+</li>
+<li>
+<p>sae git server certificate verification failed</p>
+</li>
+<li>
+<p>edit file ～/.bashrc
+add the line: <code>export GIT_SSL_NO_VERIFY=1</code>end of the file and source ~/.bashrc</p>
+</li>
+</ol>
+<hr />
+<h4><a class="header" href="#git-submodel" id="git-submodel">Git Submodel</a></h4>
+<p>....</p>
+<hr />
+<h4><a class="header" href="#git-fetch" id="git-fetch">Git Fetch</a></h4>
+<ul>
+<li>git fetch origin  # 是将远程的代码pull下来在对应的分支　不去merge</li>
+</ul>
+<h4><a class="header" href="#git-blame" id="git-blame">Git Blame</a></h4>
+<ul>
+<li>git blame 
+<ul>
+<li><code>git blame -L 569,+10 models.py</code></li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../other/emacs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../other/real-time-html.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../other/emacs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../other/real-time-html.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

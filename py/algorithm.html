@@ -1,0 +1,505 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>algorithm - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html" class="active"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: 一些算法
+date: 2016-04-20
+category: 算法
+tag: 算法</h2>
+<p><strong>摘要:</strong>
+谈到算法有两种感觉,第一个感觉是高大上,第二个感觉有难度.高大上是因为那些研究算法的
+人都是一些大牛,并且在数学上面有很深的造诣.很钦佩和尊敬那些在算法事业上的牛人.说算
+法有难度,是针对个人来说的,我对算法很感兴趣,但是总是浅尝辄止,有的复杂算法就了解下
+一带而过了,希望能在这里记录写学习算法的点滴不管是容易的算法还是难的算法还是亲身经历
+下得好!</p>
+<hr />
+<h4><a class="header" href="#vector-correlation-algrithm" id="vector-correlation-algrithm">Vector Correlation Algrithm</a></h4>
+<p>图片相似度中使用到的算法.</p>
+<ul>
+<li>Correlation Section[-1, 1]
+** 0:lower 1: higher . And the negative is negative correlations**</li>
+</ul>
+<pre><code>#coding=utf-8  
+import sys
+# input 2 vector array  
+# output pearson correlation score  
+
+def PearsonCorrelationSimilarity(vec1, vec2):  
+    value = range(len(vec1))  
+  
+    sum_vec1 = sum([ vec1[i] for i in value])  
+    sum_vec2 = sum([ vec2[i] for i in value])  
+  
+    square_sum_vec1 = sum([ pow(vec1[i],2) for i in  value])  
+    square_sum_vec2 = sum([ pow(vec2[i],2) for i in  value])  
+  
+    product = sum([ vec1[i]*vec2[i] for i in value])  
+  
+    numerator = product - (sum_vec1 * sum_vec2 / len(vec1))   
+    dominator = ((square_sum_vec1 - pow(sum_vec1, 2) / len(vec1)) * (square_sum_vec2 - pow(sum_vec2, 2) / len(vec2))) ** 0.5  
+  
+    if dominator == 0:  
+        return 0  
+    result = numerator / (dominator * 1.0)  
+  
+    return result  
+  
+vec1 = [5.0, 3.0, 2.5]
+vec2 = [2.0, 2.5, 5.0]  
+vec3 = [5.0, 3.0, 0]  
+print (PearsonCorrelationSimilarity(vec1, vec2))
+print (PearsonCorrelationSimilarity(vec1, vec3))
+</code></pre>
+<p><a href="http://www.ruanyifeng.com/blog/2013/03/similar_image_search_part_ii.html">Theory</a></p>
+<p><a href="http://blog.csdn.net/afeionepiece/article/details/47624465">Refrence Link</a></p>
+<hr />
+<h4><a class="header" href="#otsu-algorithm大津算法" id="otsu-algorithm大津算法">Otsu Algorithm(大津算法)</a></h4>
+<p>图片处理过程中使用到的算法.</p>
+<ul>
+<li>Introduce
+<code>w1 = n1 / n</code> :n1表示小于灰度阀值的像素个数　n 表示像素总个数　w1　表示前者所占比例
+<code>w2 = n2 / n</code> :n2表示大于灰度阀值的像素个数
+<code>类间差异 = w1w2(μ1-μ2)^2</code>:穷举最低像素灰度值到最高像素灰度值之间的筏值，计算出类间差异最小</li>
+</ul>
+<p><a href="http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html">Theory</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2013/03/similar_image_search_part_ii.html">Refrence Link</a></p>
+<hr />
+<h4><a class="header" href="#python实现stack" id="python实现stack">python实现stack</a></h4>
+<pre><code>#coding=utf-8
+
+class Stack(object):
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return len(self.items) == 0
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+       return self.items.pop()
+
+    def peek(self):
+       if not self.isEmpty():
+           return self.items[-1]
+
+    def size(self):
+        return len(self.items)
+
+</code></pre>
+<h4><a class="header" href="#逆波兰表达式后缀表达式" id="逆波兰表达式后缀表达式">逆波兰表达式(后缀表达式)</a></h4>
+<p><a href="http://www.programcreek.com/2012/12/leetcode-evaluate-reverse-polish-notation/">java实现</a>
+以下是Python实现.</p>
+<pre><code>[&quot;2&quot;, &quot;1&quot;, &quot;+&quot;, &quot;3&quot;, &quot;*&quot;] -&gt; ((2 + 1) * 3) -&gt; 9
+[&quot;4&quot;, &quot;13&quot;, &quot;5&quot;, &quot;/&quot;, &quot;+&quot;] -&gt; (4 + (13 / 5)) -&gt; 6
+</code></pre>
+<ol>
+<li>简单的实现方法</li>
+</ol>
+<pre><code>from stack import Stack
+
+a = Stack()
+s = [&quot;2&quot;, &quot;1&quot;, &quot;+&quot;, &quot;3&quot;, &quot;*&quot;]
+
+for i in s:
+   if i.isdigit():
+       a.push(i)
+   else:
+       x = a.pop()
+       y = a.pop()
+       if i == '+':
+           a.push(int(x) + int(y))
+       if i == '-':
+           a.push(int(y) - int(x))
+       if i == '*':
+           a.push(int(x) * int(y))
+       if i == '/':
+           a.push(int(y) / int(x))
+result = a.pop()
+</code></pre>
+<ol start="2">
+<li>公认的实现方法</li>
+</ol>
+<pre><code>from stack import Stack
+
+stack = Stack()
+s = [&quot;2&quot;, &quot;1&quot;, &quot;+&quot;, &quot;3&quot;, &quot;*&quot;]
+operators = '+-*/'
+
+for i in s:
+   if i not in operators:
+       stack.push(i)
+   else:
+       x = int(stack.pop())
+       y = int(stack.pop())
+       index = operators.index(i)
+       if index == 0:
+           stack.push(x + y)
+       if index == 1:
+           stack.push(y - x)
+       if index == 2:
+           stack.push(x * y)
+       if index == 3:
+           stack.push(y / x)
+</code></pre>
+<hr />
+<h4><a class="header" href="#最长回文算法" id="最长回文算法">最长回文算法</a></h4>
+<p>注意这里的算法复杂度和空间复杂度.以下是Python实现.
+<a href="http://www.programcreek.com/2013/12/leetcode-solution-of-longest-palindromic-substring-java/">java实现</a></p>
+<pre><code>#coding=utf-8
+import sys
+
+
+def longest_palindrome(s):
+    &quot;&quot;&quot;
+    Time O(n^2), Space O(n^2)
+    &quot;&quot;&quot;
+    if not s:
+        return
+
+    slen = len(s)
+    max_len = 1
+
+    dp = []
+
+    # init the zero array, Space 
+    for x in xrange(slen):
+        d = []
+        for y in xrange(slen):
+            d.append(0)
+        dp.append(d)
+
+    longest = ''
+
+    # condition judgement, Time
+    for l in range(slen):
+        for i in range(slen - l):
+            j = i + l
+            if s[i] == s[j] and (j - i &lt;= 2 or dp[i + 1][j - 1]):
+                dp[i][j] = 1
+
+                if j - i + 1 &gt; max_len:
+                    longest = s[i: j + 1]
+    return longest
+
+def simple_longest_plaindrome(s):
+    &quot;&quot;&quot;
+    Time O(n^2), Space O(1)
+    &quot;&quot;&quot;
+    slen = len(s)
+
+    if not s:
+        return
+    if slen == 1:
+        return s
+
+    longest = s[0:1]
+
+    # 从中间向两端查找直到符合回文
+    def helper(s, begin, end):
+        while begin &gt;=0 and end &lt;= len(s) -1 and s[begin] == s[end]:
+            begin -= 1
+            end += 1
+        return s[begin + 1: end]
+
+    for i in xrange(slen):
+        tmp = helper(s, i, i)
+        if len(tmp) &gt; len(longest):
+            longest = tmp
+
+        tmp = helper(s, i, i + 1)
+        if len(tmp) &gt; len(longest):
+            longest = tmp;
+
+    return longest
+
+if __name__ == '__main__':
+    s = sys.argv[1]
+    l = longest_palindrome(s)
+    print l
+    l2 = simple_longest_plaindrome(s)
+    print l2
+</code></pre>
+<hr />
+<h4><a class="header" href="#单词分割" id="单词分割">单词分割</a></h4>
+<p>给一个字符串s 和一个字典d(python用list表示),如果s可以从d中挑选一个或多个拼接则表示这个s可以被d分割.
+s = &quot;leetcode&quot;,
+dict = [&quot;leet&quot;, &quot;code&quot;].</p>
+<p>以下是Python实现.
+<a href="http://www.programcreek.com/2012/12/leetcode-solution-word-break/">Java实现</a></p>
+<pre><code>#coding=utf-8
+import sys
+
+
+class WordBreak(object):
+    def __init__(self, s, d):
+        self.string = s
+        self.dictionary = d
+
+    def isWordBreak(self, simple=True):
+        if simple:
+            return self.simpleBreakHelper(self.string, self.dictionary)
+
+        return self.wordBreakHelper(self.string, self.dictionary, 0)
+
+    def wordBreakHelper(self, s, d, start):
+        &quot;&quot;&quot;将目标字符串的对应位置(有start和dictionary决定)查找与在字典内相等的
+        字符串,如果相等则从下一个位置继续查看是否匹配
+        &quot;&quot;&quot;
+        if start == len(s):
+            return True
+
+        for a in d:
+            al = len(a)
+            end = start + al
+            if end &gt; len(s):
+                continue
+            if s[start: end] == a:
+                if self.wordBreakHelper(s, d, end):  # 递归
+                    return True
+        return False
+
+    def simpleBreakHelper(self, s, d):
+        &quot;&quot;&quot;当字典很大的时候采用这个方法O(n^2) n 表示字符串的长度
+        穷举设置标志位
+        &quot;&quot;&quot;
+        pos = []
+        slen = len(s)
+        
+        for x in xrange(slen + 1):
+            pos.append(-1)
+        pos[0] = 0
+
+        for i in xrange(slen):
+            if pos[i] != -1:
+                for j in xrange(i + 1, slen + 1):
+                    sub = s[i: j]
+                    if sub in d:
+                        pos[j] = i
+        return pos[slen] != -1
+
+
+if __name__ == '__main__':
+    s = sys.argv[1]
+    d = sys.argv[2].split(',')
+
+    wb = WordBreak(s, d)
+    print wb.isWordBreak()
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../py/action-exaple.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../py/base.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../py/action-exaple.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../py/base.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

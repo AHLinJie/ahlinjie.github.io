@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>emacs - LinJie'sBook</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../db/index.html"><strong aria-hidden="true">1.</strong> DataBase</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql.html"><strong aria-hidden="true">1.1.</strong> MySQL</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../db/mysql-base.html"><strong aria-hidden="true">1.1.1.</strong> MySQL</a></li><li class="chapter-item expanded "><a href="../db/mysql-performance.html"><strong aria-hidden="true">1.1.2.</strong> MySQL</a></li></ol></li><li class="chapter-item expanded "><a href="../db/redis.html"><strong aria-hidden="true">1.2.</strong> Redis</a></li></ol></li><li class="chapter-item expanded "><a href="../js/index.html"><strong aria-hidden="true">2.</strong> Js</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../js/simple-case.html"><strong aria-hidden="true">2.1.</strong> Sample Codes</a></li></ol></li><li class="chapter-item expanded "><a href="../rust/index.html"><strong aria-hidden="true">3.</strong> Rust</a></li><li class="chapter-item expanded "><a href="../ops/index.html"><strong aria-hidden="true">4.</strong> Ops</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ops/abtest.html"><strong aria-hidden="true">4.1.</strong> ABtest</a></li><li class="chapter-item expanded "><a href="../ops/aliyun.html"><strong aria-hidden="true">4.2.</strong> aliyun</a></li><li class="chapter-item expanded "><a href="../ops/bashscript.html"><strong aria-hidden="true">4.3.</strong> bashscript</a></li><li class="chapter-item expanded "><a href="../ops/django-gunicorn-nginx.html"><strong aria-hidden="true">4.4.</strong> django-gunicorn-nginx</a></li><li class="chapter-item expanded "><a href="../ops/docker.html"><strong aria-hidden="true">4.5.</strong> docker</a></li><li class="chapter-item expanded "><a href="../ops/flower.html"><strong aria-hidden="true">4.6.</strong> flower</a></li><li class="chapter-item expanded "><a href="../ops/linux-cmd.html"><strong aria-hidden="true">4.7.</strong> linux-cmd</a></li><li class="chapter-item expanded "><a href="../ops/markdown.html"><strong aria-hidden="true">4.8.</strong> markdown</a></li><li class="chapter-item expanded "><a href="../ops/other.html"><strong aria-hidden="true">4.9.</strong> other</a></li><li class="chapter-item expanded "><a href="../ops/supervisor.html"><strong aria-hidden="true">4.10.</strong> supervisor</a></li></ol></li><li class="chapter-item expanded "><a href="../py/index.html"><strong aria-hidden="true">5.</strong> Python</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../py/action-exaple.html"><strong aria-hidden="true">5.1.</strong> action-example</a></li><li class="chapter-item expanded "><a href="../py/algorithm.html"><strong aria-hidden="true">5.2.</strong> algorithm</a></li><li class="chapter-item expanded "><a href="../py/base.html"><strong aria-hidden="true">5.3.</strong> base</a></li><li class="chapter-item expanded "><a href="../py/big_float_plus.html"><strong aria-hidden="true">5.4.</strong> big_float_plus</a></li><li class="chapter-item expanded "><a href="../py/buildin.html"><strong aria-hidden="true">5.5.</strong> buildin</a></li><li class="chapter-item expanded "><a href="../py/code-style.html"><strong aria-hidden="true">5.6.</strong> code-style</a></li><li class="chapter-item expanded "><a href="../py/cprofile.html"><strong aria-hidden="true">5.7.</strong> cprofile</a></li><li class="chapter-item expanded "><a href="../py/design-model.html"><strong aria-hidden="true">5.8.</strong> design-model</a></li><li class="chapter-item expanded "><a href="../py/django-case.html"><strong aria-hidden="true">5.9.</strong> django-case</a></li><li class="chapter-item expanded "><a href="../py/django-on-commit.html"><strong aria-hidden="true">5.10.</strong> django-on-commit</a></li><li class="chapter-item expanded "><a href="../py/django-queryset-cache.html"><strong aria-hidden="true">5.11.</strong> django-queryset-cache</a></li><li class="chapter-item expanded "><a href="../py/django-signal.html"><strong aria-hidden="true">5.12.</strong> django-signal</a></li><li class="chapter-item expanded "><a href="../py/django-sql-debug.html"><strong aria-hidden="true">5.13.</strong> django-sql-debug</a></li><li class="chapter-item expanded "><a href="../py/excel.html"><strong aria-hidden="true">5.14.</strong> excel</a></li><li class="chapter-item expanded "><a href="../py/ipdb.html"><strong aria-hidden="true">5.15.</strong> ipdb</a></li><li class="chapter-item expanded "><a href="../py/mypy.html"><strong aria-hidden="true">5.16.</strong> mypy</a></li><li class="chapter-item expanded "><a href="../py/nose_test.html"><strong aria-hidden="true">5.17.</strong> nose_test</a></li><li class="chapter-item expanded "><a href="../py/numpy.html"><strong aria-hidden="true">5.18.</strong> numpy</a></li><li class="chapter-item expanded "><a href="../py/py-object.html"><strong aria-hidden="true">5.19.</strong> py-object</a></li><li class="chapter-item expanded "><a href="../py/python-optimize.html"><strong aria-hidden="true">5.20.</strong> python-optimize</a></li><li class="chapter-item expanded "><a href="../py/python_unittest.html"><strong aria-hidden="true">5.21.</strong> python_unittest</a></li><li class="chapter-item expanded "><a href="../py/requests.html"><strong aria-hidden="true">5.22.</strong> requests</a></li><li class="chapter-item expanded "><a href="../py/scrapy.html"><strong aria-hidden="true">5.23.</strong> scrapy</a></li><li class="chapter-item expanded "><a href="../py/simple-case.html"><strong aria-hidden="true">5.24.</strong> simple-case</a></li><li class="chapter-item expanded "><a href="../py/sort.html"><strong aria-hidden="true">5.25.</strong> sort</a></li><li class="chapter-item expanded "><a href="../py/tools.html"><strong aria-hidden="true">5.26.</strong> tools</a></li><li class="chapter-item expanded "><a href="../py/tornado.html"><strong aria-hidden="true">5.27.</strong> tornado</a></li><li class="chapter-item expanded "><a href="../py/virtualenv.html"><strong aria-hidden="true">5.28.</strong> virtualenv</a></li></ol></li><li class="chapter-item expanded "><a href="../other/index.html"><strong aria-hidden="true">6.</strong> Other</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../other/curl.html"><strong aria-hidden="true">6.1.</strong> curl</a></li><li class="chapter-item expanded "><a href="../other/easy-talk.html"><strong aria-hidden="true">6.2.</strong> easy-talk</a></li><li class="chapter-item expanded "><a href="../other/emacs.html" class="active"><strong aria-hidden="true">6.3.</strong> emacs</a></li><li class="chapter-item expanded "><a href="../other/git.html"><strong aria-hidden="true">6.4.</strong> git</a></li><li class="chapter-item expanded "><a href="../other/real-time-html.html"><strong aria-hidden="true">6.5.</strong> real-time-html</a></li><li class="chapter-item expanded "><a href="../other/restful.html"><strong aria-hidden="true">6.6.</strong> restful</a></li><li class="chapter-item expanded "><a href="../other/ubuntu-deps.html"><strong aria-hidden="true">6.7.</strong> ubuntu-deps</a></li><li class="chapter-item expanded "><a href="../other/vim.html"><strong aria-hidden="true">6.8.</strong> vim</a></li><li class="chapter-item expanded "><a href="../other/web-url-flow.html"><strong aria-hidden="true">6.9.</strong> web-url-flow</a></li></ol></li><li class="chapter-item expanded "><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">LinJie'sBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <hr />
+<h2>layout: post
+title: Emacs配置及插件
+date: 2015-02-08
+category: Edit
+tag: Emacs</h2>
+<p><strong>摘要:</strong>
+有人说emacs是神的编辑器,很是羡慕那些大神用这么牛逼的编辑器,还可以配置成牛逼的ide
+都无法直视那些用emacs的开发者,给你们点赞;我以前的一个公司CEO用的就是emacs写代码;
+这里是我用过的配置文件和快捷键内容,保留在这里,以供查阅.</p>
+<h4><a class="header" href="#emacs-config" id="emacs-config">Emacs Config</a></h4>
+<pre><code>;;打开emacs 交互解释器
+;;M+x ielm
+(let ((default-directory &quot;~/.emacs.d/el-get/&quot;))
+  (normal-top-level-add-subdirs-to-load-path))
+
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/yasnippet/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/rope/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/pymacs/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/ropemacs/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/ropemode/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/auto-complete/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/virtualenvwrapper/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/virtualenv.el-master/&quot;)
+(add-to-list 'load-path &quot;~/.emacs.d/el-get/python-django/&quot;)
+
+(load &quot;~/.emacs.d/el-get/el-get/el-get.el&quot;)
+(load &quot;~/.emacs.d/el-get/python-django/python-django.el&quot;)
+(load &quot;~/.emacs.d/el-get/virtualenv.el-master/virtualenv.el&quot;)
+(load &quot;~/.emacs.d/el-get/auto-complete/auto-complete.el&quot;)
+
+(tool-bar-mode 0) 
+(menu-bar-mode 0) 
+(scroll-bar-mode 0)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(virtualenv-root &quot;~/workspace/taobao-backend/shopmanager/ve/lib/python2.7/&quot;))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;;关闭启动页面
+(setq inhibit-startup-message t)
+;;设置备份保存路径
+(setq backup-directory-alist (quote ((&quot;.&quot; . &quot;~/.backups&quot;))))
+
+;;配置virtualenv
+
+(setenv &quot;PATH&quot; (concat (getenv &quot;PATH&quot;) &quot;:&quot; &quot;~/path to you virtual env example: /ve/bin&quot;))
+(add-to-list 'exec-path &quot;~/path to you virtual env example: /ve/bin&quot;)
+
+;;speedbar 配置 下载的el文件在el-get/sr-speedbar
+(require 'sr-speedbar)
+
+;; 配置显示行号
+(global-linum-mode t)
+;;窗口切换
+(global-set-key (kbd &quot;C-S-j&quot;) 'windmove-down)
+(global-set-key (kbd &quot;C-S-k&quot;) 'windmove-up)
+(global-set-key (kbd &quot;C-S-h&quot;) 'windmove-left)
+(global-set-key (kbd &quot;C-S-l&quot;) 'windmove-right)
+</code></pre>
+<hr />
+<h4><a class="header" href="#emacs-virtualenv-config" id="emacs-virtualenv-config">emacs virtualenv config</a></h4>
+<p><a href="http://stackoverflow.com/questions/17759610/use-el-get-to-install-jedi-for-emacs-on-mac">Referance Link</a></p>
+<hr />
+<h4><a class="header" href="#webkit-in-emacs" id="webkit-in-emacs">webkit in emacs</a></h4>
+<p>M+x</p>
+<p>el-get-install webkit</p>
+<p>sudo apt-get install qt5-default</p>
+<hr />
+<h4><a class="header" href="#emacs-short-cuts" id="emacs-short-cuts">Emacs Short Cuts</a></h4>
+<table><thead><tr><th>category</th><th>cmd</th><th>explain</th></tr></thead><tbody>
+<tr><td>打开</td><td>emacs -nw</td><td>命令行打开emacs</td></tr>
+<tr><td>文件操作</td><td>C-x C-f</td><td>打开文件,出现提示时输入/username@host:filepath可编辑FTP文件</td></tr>
+<tr><td></td><td>C-x C-v</td><td>打开一个文件，取代当前缓冲区</td></tr>
+<tr><td></td><td>C-x C-s</td><td>保存文件</td></tr>
+<tr><td></td><td>C-x C-w</td><td>存为新文件</td></tr>
+<tr><td></td><td>C-x i</td><td>插入文件</td></tr>
+<tr><td></td><td>C-x C-q</td><td>切换为只读或者读写模式</td></tr>
+<tr><td></td><td>C-x C-c</td><td>退出Emacs</td></tr>
+<tr><td>编辑操作</td><td>C-f</td><td>前进一个字符</td></tr>
+<tr><td></td><td>C-b</td><td>后退一个字符</td></tr>
+<tr><td></td><td>M-f</td><td>前进一个字</td></tr>
+<tr><td></td><td>M-b</td><td>后退一个字</td></tr>
+<tr><td></td><td>C-a</td><td>移到行首</td></tr>
+<tr><td></td><td>C-e</td><td>移到行尾</td></tr>
+<tr><td></td><td>M-a</td><td>移到句首</td></tr>
+<tr><td></td><td>M-e</td><td>移到句尾</td></tr>
+<tr><td></td><td>C-p</td><td>后退一行</td></tr>
+<tr><td></td><td>C-n</td><td>前进一行</td></tr>
+<tr><td></td><td>M-x goto-line</td><td>跳到指定行</td></tr>
+<tr><td></td><td>C-v</td><td>向下翻页</td></tr>
+<tr><td></td><td>M-v</td><td>向上翻页</td></tr>
+<tr><td></td><td>M-&lt;</td><td>缓冲区头部</td></tr>
+<tr><td></td><td>M-&gt;</td><td>缓冲区尾部</td></tr>
+<tr><td></td><td>C-M-f</td><td>向前匹配括号</td></tr>
+<tr><td></td><td>C-M-b</td><td>向后匹配括号</td></tr>
+<tr><td></td><td>C-l</td><td>当前行居中</td></tr>
+<tr><td></td><td>M-n or C-u n</td><td>重复操作随后的命令n次</td></tr>
+<tr><td></td><td>C-u</td><td>重复操作随后的命令4次</td></tr>
+<tr><td></td><td>C-u C-u</td><td>重复操作随后的命令8次</td></tr>
+<tr><td></td><td>C-x ESC ESC</td><td>执行历史命令记录，M-p选择上一条命令，M-n选择下一条命令</td></tr>
+<tr><td></td><td>C-d</td><td>删除一个字符</td></tr>
+<tr><td></td><td>M-d</td><td>删除一个字</td></tr>
+<tr><td></td><td>C-k</td><td>删除一行</td></tr>
+<tr><td></td><td>M-k</td><td>删除一句</td></tr>
+<tr><td></td><td>C-w</td><td>删除标记区域</td></tr>
+<tr><td></td><td>C-y</td><td>粘贴删除的内容</td></tr>
+<tr><td></td><td>C-@</td><td>标记开始区域</td></tr>
+<tr><td></td><td>C-x h</td><td>标记所有文字</td></tr>
+<tr><td></td><td>C-x C-x</td><td>交换光标位置和区域标记区开头</td></tr>
+<tr><td></td><td>M-w</td><td>复制标记区域</td></tr>
+<tr><td></td><td>C-_ or C-x u</td><td>撤消操作</td></tr>
+<tr><td></td><td>M-x shell</td><td>打开SHELL	执行SHELL命令</td></tr>
+<tr><td></td><td>M-!</td><td>执行SHELL命令 (shell-command)</td></tr>
+<tr><td></td><td>M-1 M-!</td><td>执行SHELL命令,命令输出插入光标位置,不打开新输出窗口</td></tr>
+<tr><td></td><td>C-x r t</td><td>输入注释内容	多行注释（光标起始列到光标结束列之间填充注释内容）</td></tr>
+<tr><td></td><td>c-x r k</td><td>反多行注释(选中到最后一行紧挨着注释字符之后的位置按)</td></tr>
+<tr><td></td><td>M C-\</td><td>自动缩进光标和标记间的区域</td></tr>
+<tr><td></td><td>M-m</td><td>移动光标到行首第一个(非空格)字符</td></tr>
+<tr><td></td><td>M-^</td><td>将当前行接到上一行末尾处</td></tr>
+<tr><td></td><td>M-;</td><td>添加缩进并格式化的注释</td></tr>
+<tr><td></td><td>C-c C-q</td><td>根据缩进风格缩进整个函数</td></tr>
+<tr><td></td><td>C-c C-a</td><td>切换自动换行功能</td></tr>
+<tr><td></td><td>C-c C-d</td><td>一次性删除光标后的一串空格(greedy delete)</td></tr>
+<tr><td></td><td>M-</td><td></td></tr>
+<tr><td>窗口操作</td><td>C-x 0</td><td>关闭本窗口</td></tr>
+<tr><td></td><td>C-x 1</td><td>只留下一个窗口</td></tr>
+<tr><td></td><td>C-x 2 </td><td>垂直均分窗口</td></tr>
+<tr><td></td><td>C-x 3 </td><td>水平均分窗口</td></tr>
+<tr><td></td><td>C-x o</td><td>切换到别的窗口</td></tr>
+<tr><td></td><td>C-x s</td><td>保存所有窗口的缓冲</td></tr>
+<tr><td></td><td>C-x b</td><td>选择当前窗口的缓冲区</td></tr>
+<tr><td></td><td>C-x ^</td><td>纵向扩大窗口</td></tr>
+<tr><td></td><td>C-x }</td><td>横向扩大窗口</td></tr>
+<tr><td></td><td>C-x {</td><td>横向缩小窗口</td></tr>
+<tr><td>缓冲区列表操作</td><td>C-x C-b</td><td>打开缓冲区列表</td></tr>
+<tr><td></td><td>d or k</td><td>标记为删除</td></tr>
+<tr><td></td><td>~</td><td>标记为未修改状态</td></tr>
+<tr><td></td><td>%</td><td>标记为只读</td></tr>
+<tr><td></td><td>s</td><td>保存缓冲</td></tr>
+<tr><td></td><td>u</td><td>取消标记</td></tr>
+<tr><td></td><td>x</td><td>执行标记的操作</td></tr>
+<tr><td></td><td>f</td><td>在当前窗口打开该缓冲区</td></tr>
+<tr><td></td><td>o</td><td>在其他窗口打开该缓冲区</td></tr>
+<tr><td>目录操作说明：</td><td>目录模式中，如果输入!，在命令行中包含*或者?，有特殊的含义。*匹配当前光标所在的文件和所有标记的文件，?分别在每一个标记的文件上 执行该命令。</td><td></td></tr>
+<tr><td></td><td>C-x d</td><td>打开目录模式</td></tr>
+<tr><td></td><td>s</td><td>按日期/文件名排序显示</td></tr>
+<tr><td></td><td>v</td><td>阅读光标所在的文件</td></tr>
+<tr><td></td><td>q</td><td>退出阅读的文件</td></tr>
+<tr><td></td><td>d</td><td>标记为删除</td></tr>
+<tr><td></td><td>x</td><td>执行标记</td></tr>
+<tr><td></td><td>D</td><td>马上删除当前文件</td></tr>
+<tr><td></td><td>C</td><td>拷贝当前文件</td></tr>
+<tr><td></td><td>R</td><td>重名名当前文件</td></tr>
+<tr><td></td><td>＋</td><td>新建文件夹</td></tr>
+<tr><td></td><td>Z</td><td>压缩文件</td></tr>
+<tr><td></td><td>!</td><td>对光标所在的文件执行SHELL命令</td></tr>
+<tr><td></td><td>g</td><td>刷新显示</td></tr>
+<tr><td></td><td>i</td><td>在当前缓冲区的末尾插入子目录的内容</td></tr>
+<tr><td></td><td>[n]m</td><td>标记光标所在的文件，如果指定n，则从光标所在的文件起后n个文件被标记</td></tr>
+<tr><td></td><td>[n]u</td><td>取消当前光标标记的文件，n的含义同上</td></tr>
+<tr><td></td><td>t</td><td>反向标记文件</td></tr>
+<tr><td></td><td>%-m</td><td>正则标记</td></tr>
+<tr><td></td><td>q</td><td>退出目录模式</td></tr>
+<tr><td>程序编译</td><td></td><td>M-x compile </td></tr>
+<tr><td></td><td>M-x gdb</td><td>GDB排错</td></tr>
+<tr><td></td><td>M-x dbx</td><td>DBX排错</td></tr>
+<tr><td></td><td>M-x xdb</td><td>XDB排错</td></tr>
+<tr><td></td><td>M-x sdb</td><td>SDB排错</td></tr>
+<tr><td>搜索模式</td><td>C-s key</td><td>向前搜索</td></tr>
+<tr><td></td><td>C-s</td><td>查找下一个</td></tr>
+<tr><td></td><td>ENTER</td><td>停止搜索</td></tr>
+<tr><td></td><td>C-r key </td><td>反向搜索</td></tr>
+<tr><td></td><td>C-s C-w</td><td>以光标所在位置的字为关键字搜索</td></tr>
+<tr><td></td><td>C-s C-s</td><td>重复上次搜索</td></tr>
+<tr><td></td><td>C-r C-r</td><td>重复上次反向搜索</td></tr>
+<tr><td></td><td>C-s ENTER C-w</td><td>进入单词搜索模式</td></tr>
+<tr><td></td><td>C-r ENTER C-w</td><td>进入反向单词搜索模式</td></tr>
+<tr><td></td><td>M-x replace-string ENTER search-string ENTER</td><td>替换(选中的)不选中则从光标位置替换到结尾</td></tr>
+<tr><td></td><td>M-% search-string ENTER replace-string ENTER</td><td>交互替换（空格则跳过y则替换，无需选中）</td></tr>
+<tr><td></td><td>C-r</td><td>在进入单词搜索(查找/替换)模式后，该命令进入迭代编辑模式</td></tr>
+<tr><td></td><td>C-M-x</td><td>退出迭代编辑模式，返回到查找/替换模式</td></tr>
+<tr><td></td><td>C-M- s</td><td>向前正则搜索</td></tr>
+<tr><td></td><td>C-M-r</td><td>向后正则搜索</td></tr>
+<tr><td></td><td>M-,(逗号)</td><td>在tags-search里跳至下一个匹配处</td></tr>
+<tr><td></td><td>M-x tags-query-replace</td><td>在设置过标签的所有文件里替换文本</td></tr>
+<tr><td></td><td>M-x tags-search ENTER</td><td>在所有标签里搜索(使用正则表达式)</td></tr>
+<tr><td></td><td>M-.(点)</td><td>搜索标签</td></tr>
+<tr><td></td><td>C-M-%</td><td>正则交互替换</td></tr>
+<tr><td>shell</td><td>C-c C-c</td><td>相当于Bash下的C-c</td></tr>
+<tr><td></td><td>C-c C-z</td><td>相当于Bash下的C-z</td></tr>
+<tr><td></td><td>C-c C-d</td><td>相当于Bash下的C-d</td></tr>
+<tr><td></td><td>M-p</td><td>执行前一条命令</td></tr>
+<tr><td></td><td>C-n</td><td>执行下一条命令</td></tr>
+<tr><td></td><td>C-c C-o</td><td>删除最后一条命令产生的输出</td></tr>
+<tr><td></td><td>C-c C-r</td><td>屏幕滚动到最后一条命令输出的开头</td></tr>
+<tr><td></td><td>C-c C-e</td><td>屏幕滚动到最后一套命令输出的结尾</td></tr>
+<tr><td></td><td>C-c C-p</td><td>查看前一条命令的输出</td></tr>
+<tr><td></td><td>C-c C-n</td><td>查看后一条命令的输出</td></tr>
+<tr><td>打印资料</td><td>M-x print-buffer</td><td>先使用pr,然后使用lpr</td></tr>
+<tr><td></td><td>M-x lpr-buffer</td><td>直接使用lpr</td></tr>
+<tr><td></td><td>M-x print-region</td><td></td></tr>
+<tr><td></td><td>M-x lpr-region</td><td></td></tr>
+<tr><td>收发邮件</td><td>M-x mail</td><td>发送邮件, C-c C-s 发送,C-c C-c 发送并退出</td></tr>
+<tr><td></td><td>M-x rmail</td><td>接受邮件</td></tr>
+<tr><td>版本控制</td><td>C-x v d</td><td>显示当前目录下所有注册过的文件(show all registered files in this dir)</td></tr>
+<tr><td></td><td>C-x v =</td><td>比较不同版本间的差异(show diff between versions)</td></tr>
+<tr><td></td><td>C-x v u</td><td>移除上次提交之后的更改(remove all changes since last checkin)</td></tr>
+<tr><td></td><td>C-x v ~</td><td>在不同窗格中显示某个版本(show certain version in different window)</td></tr>
+<tr><td></td><td>C-x v l</td><td>打印日志(print log)</td></tr>
+<tr><td></td><td>C-x v i</td><td>标记文件等待添加版本控制(mark file for version control add)</td></tr>
+<tr><td></td><td>C-x v h</td><td>给文件添加版本控制文件头(insert version control header into file)</td></tr>
+<tr><td></td><td>C-x v r</td><td>获取命名过的快照(check out named snapshot)</td></tr>
+<tr><td></td><td>C-x v s</td><td>创建命名的快照(create named snapshot)</td></tr>
+<tr><td></td><td>C-x v a</td><td>创建gnu风格的更改日志(create changelog file in gnu-style)</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../other/easy-talk.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../other/git.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../other/easy-talk.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../other/git.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
